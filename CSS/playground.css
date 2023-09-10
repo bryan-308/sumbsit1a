@@ -50,10 +50,19 @@
     }
 }
 @media only screen and (max-width: 600px) {}
-@media only screen and (max-width: 450px) {
-
+@media only screen and (max-width: 450px) {   
+    .intro-subtitle {
+        font-size: var(--font-size-xs);
+        margin: 0;
+    }
 }
-@media only screen and (max-width: 426px) {}
+@media only screen and (max-width: 426px) {
+    
+    .intro-subtitle {
+        font-size: var(--font-size-xs);
+        margin: 0;
+    }
+}
 @media only screen and (max-width: 375px) {
     .intro-title {
         font-size: var(--font-size-h5);
