@@ -1010,7 +1010,10 @@ footer p a:hover {
         color: var(--bold-text);
         font-weight: 700;
     }
-    
+    .sub-card {
+        width: 90%;
+        margin: 0 0 40px 0;
+    }
     .vercel-logo img {
         height: 12px;
     }
