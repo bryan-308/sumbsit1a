@@ -64,10 +64,10 @@ function randomValues() {
                 value: '10%'
             },
             {
-                value: anime.random(10, 15) + '%', duration: 5
+                value: anime.random(10, 15) + '%', duration: 1
             },
             {
-                value: '50%', duration: 500
+                value: '50%', duration: 300
             }
         ],
         easing: 'easeOutElastic(1, .9)',
