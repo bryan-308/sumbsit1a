@@ -60,6 +60,10 @@ function updateSchedules() {
 
             const scheduleDiv = document.getElementById(`schedule${i + 1}`);
             scheduleDiv.innerHTML = `${days} ${daysText} ${hours} ${hoursText} ${minutes} ${minutesText} ${seconds} ${secondsText}`;
+        } else {
+      // Countdown has reached zero, display event happening message
+      const scheduleDiv = document.getElementById(`schedule${i + 1}`);
+      scheduleDiv.innerHTML = `Late ka na ata`;
         }
     }
 }
