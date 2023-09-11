@@ -64,7 +64,7 @@ function randomValues() {
                 value: '10%'
             },
             {
-                value: anime.random(10, 15) + '%', duration: 500
+                value: anime.random(10, 15) + '%', duration: 5
             },
             {
                 value: '50%', duration: 500
