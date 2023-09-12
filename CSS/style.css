@@ -70,8 +70,8 @@
     --color8: #ea9a06;
     --color9: #a72e0d;
     
-    --title1: #500808;
-    --title2: #a72e0d;
+    --title1: #F88820;
+    --title2: #601008;
 
     --accordion-shadow: 2px 2px 4px #c3c3c3, -7px -7px 4px #f0f0f026;
     --card-shadow: 0px 7px 10px 1px #e7e7e7;
@@ -141,7 +141,7 @@
     --color9: #a72e0d;
     --footer-bg: #252422;
     
-    --title1: #b91616;
+    --title1: #500808;
     --title2: #f5f5f5;
 
     --primary-bg: #1b1b1b;
@@ -425,7 +425,7 @@ input:checked+.slider:before {
 }
 
 .intro-title p:nth-child(2) {
-    color: var(--color2);
+    color: var(--color1);
     font-size: var(--font-size-large);
 }
 
