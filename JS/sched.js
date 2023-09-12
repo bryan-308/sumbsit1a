@@ -33,18 +33,18 @@ function updateSchedules() {
     // Customize your schedule here (day, hour, minute)
     const schedule = [
         { day: 1, hour: 9, minute: 0 },   // Monday 9:00 AM
-        { day: 1, hour: 14, minute: 30 }, // Monday 2:30 PM
-        { day: 2, hour: 9, minute: 0 },   // Tuesday 9:00 AM
-        { day: 2, hour: 14, minute: 30 }, // Tuesday 2:30 PM
-        { day: 2, hour: 17, minute: 0 },  // Tuesday 5:00 PM
-        { day: 3, hour: 10, minute: 0 },  // Wednesday 10:00 AM
-        { day: 3, hour: 14, minute: 30 }, // Wednesday 2:30 PM
-        { day: 3, hour: 17, minute: 0 },  // Wednesday 5:00 PM
-        { day: 4, hour: 11, minute: 0 },  // Thursday 11:00 AM
-        { day: 4, hour: 16, minute: 30 }, // Thursday 4:30 PM
-        { day: 5, hour: 8, minute: 0 },   // Friday 8:00 AM
-        { day: 5, hour: 13, minute: 30 }, // Friday 1:30 PM
-        { day: 6, hour: 13, minute: 0 }   // Saturday 1:00 PM
+        { day: 1, hour: 13, minute: 0 }, // Monday 1:00 PM
+        { day: 2, hour: 7, minute: 30 },   // Tuesday 7:30 AM
+        { day: 2, hour: 10, minute: 0 }, // Tuesday 10:00 PM
+        { day: 2, hour: 13, minute: 0 },  // Tuesday 1:00 PM
+        { day: 3, hour: 8, minute: 0 },  // Wednesday 8:00 AM
+        { day: 3, hour: 11, minute: 0 }, // Wednesday 11:00 AM
+        { day: 3, hour: 13, minute: 0 },  // Wednesday 1:00 PM
+        { day: 4, hour: 8, minute: 0 },  // Thursday 8:00 AM
+        { day: 4, hour: 13, minute: 0 }, // Thursday 1:00 PM
+        { day: 5, hour: 7, minute: 30 },   // Friday 7:30 AM
+        { day: 5, hour: 13, minute: 0 }, // Friday 1:00 PM
+        { day: 6, hour: 8, minute: 0 }   // Saturday 8:00 AM
     ];
 
     for (let i = 0; i < schedule.length; i++) {
