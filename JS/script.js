@@ -64,10 +64,10 @@ function randomValues() {
                 value: '10%'
             },
             {
-                value: anime.random(10, 15) + '%', duration: 1
+                value: anime.random(10, 15) + '%', duration: 50
             },
             {
-                value: '50%', duration: 300
+                value: '50%', duration: 500
             }
         ],
         easing: 'easeOutElastic(1, .9)',
@@ -142,4 +142,35 @@ function handleSubcontent(subContent, button, closeButton) {
     closeButton.addEventListener("click", () => {
         subContent.classList.remove("active");
     });
+}
+
+const weightInput = document.getElementById("weight");
+const heightInput = document.getElementById("height");
+const result = document.getElementById("bmi");
+const meaning = document.getElementById("meaning");
+
+weightInput.addEventListener("input", calculateBMI);
+heightInput.addEventListener("input", calculateBMI);
+
+function calculateBMI() {
+    const weight = parseFloat(weightInput.value);
+    const height = parseFloat(heightInput.value);
+
+    if (!isNaN(weight) && !isNaN(height) && height > 0) {
+        const bmi = weight / (height * height);
+        result.textContent = `Your BMI is: ${bmi.toFixed(3)}`;
+        
+        if (bmi >= 30) {
+            meaning.textContent = "OBESE";
+        } else if (bmi >= 25 ) {
+            meaning.textContent = "OVERWEIGHT";
+        } else if (bmi >= 18.6) {
+            meaning.textContent = "NORMAL";
+        } else {
+            meaning.textContent = "UNDERWEIGHT";
+        }
+    } else {
+        result.textContent = "Enter Valid Weight and Height";
+    }
+
 }
