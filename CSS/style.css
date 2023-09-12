@@ -1068,7 +1068,7 @@ footer p a:hover {
     }
 
     .intro-title p {
-        font-size: var(--font-size-h5);
+        font-size: var(--font-size-h3);
     }
 }
 @media only screen and (max-width: 426px) {}
