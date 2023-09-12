@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -37,6 +38,7 @@
     --default-font-family: 'Poppins', sans-serif;
     --title-font: 'Inter', sans-serif;
     --subheader-font: 'Montserrat', sans-serif;
+    --Tektur-font: 'Tektur', cursive;
 
     --card-text: #fefefe;
     --card-bottom-text: #252422;
@@ -67,6 +69,9 @@
     --color7: #ffbf2b;
     --color8: #ea9a06;
     --color9: #a72e0d;
+    
+    --title1: #500808;
+    --title2: #a72e0d;
 
     --accordion-shadow: 2px 2px 4px #c3c3c3, -7px -7px 4px #f0f0f026;
     --card-shadow: 0px 7px 10px 1px #e7e7e7;
@@ -135,6 +140,9 @@
     --color8: #ea9a06;
     --color9: #a72e0d;
     --footer-bg: #252422;
+    
+    --title1: #b91616;
+    --title2: #ce380f;
 
     --primary-bg: #1b1b1b;
     --secondary-bg: #1a1a1bfb;
@@ -404,16 +412,24 @@ input:checked+.slider:before {
 
 .intro-title {
     font-weight: 700;
-    font-size: var(--font-size-h4);
 }
 
 .intro-title p {
-    color: var(--secondary-text);
-    font-family: var(--default-font-family);
-    line-height: 1;
+    /* color: var(--secondary-text); */
+    /* font-family: var(--default-font-family); */
+    color: var(--title1);
+    font-size: var(--font-size-h1);
+    font-family: var(--Tektur-font);
+    line-height: .9;
     transition: var(--gen-transition);
 }
 
+.intro-title p:nth-child(2) {
+    color: var(--color2);
+    font-size: var(--font-size-large);
+}
+
+/* 
 .intro-title p span {
     font-weight: 600;
     transition: var(--gen-transition);
@@ -425,35 +441,63 @@ input:checked+.slider:before {
 
 .intro-title p span:nth-child(2) {
     color: var(--color7);
-}
+} */
 
 .intro-subtitle {
-    margin: 20px 0 0 10px;
+    display: flex;
+    line-height: .9;
+    /* margin: 20px 0 0 10px; */
     font-size: var(--font-size-medium);
 }
-.intro-subtitle p {
+
+.intro-subtitle1 {
+    font-size: var(--font-size-h1);
+    height: fit-content;
+}
+
+.intro-subtitle1 p {
+    font-family: var(--Tektur-font);
+    font-style: italic;
+    font-weight: 700;
+    color: var(--title2);
+}
+
+.intro-subtitle1 p:nth-child(2) {
+    font-size: var(--font-size-xs);
+}
+
+.intro-subtitle2 {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.intro-subtitle2 p {
+    font-size: var(--font-size-small);
     font-family: var(--title-font);
     font-weight: 600;
     font-style: italic;
 }
 
-.intro-subtitle p span {
-    color: var(--active-text);
-}
-
-.intro-subtitle p:nth-child(1) {
+.intro-subtitle2 p span {
     color: var(--color3);
 }
 
-.intro-subtitle p:nth-child(2) {
-    color: var(--color5);
+.intro-subtitle2 p:nth-child(1) {
+    color: var(--color3);
 }
 
-.intro-subtitle p:nth-child(3) {
+.intro-subtitle2 p:nth-child(2) {
+    color: var(--active-text);
+}
+
+.intro-subtitle2 p:nth-child(3) {
     color: var(--color2);
 }
 
-.intro-subtitle p:nth-child(4) {
+.intro-subtitle2 p:nth-child(4) {
     color: var(--color2);
 }
 
@@ -548,6 +592,7 @@ input:checked+.slider:before {
 .officer-details h3 {
     text-align: center;
     font-weight: 700;
+    font-family: var(--Tektur-font);
     font-size: var(--font-size-small);
     margin: 0;
 }
@@ -957,17 +1002,20 @@ footer p a:hover {
 } */
 
 @media only screen and (max-width: 1024px) {
-    .intro-title {
+    /* .intro-title {
         font-size: 1;
-    }
+    } */
 }
 @media only screen and (max-width: 768px) {
     .section-divider {
         display: block;
     }
-    .intro-subtitle {
+    .intro-subtitle1 P {
+        font-size: var(--font-size-h2);
+    }
+    .intro-subtitle2 p {
         font-size: var(--font-size-xs);
-        line-height: .8;
+        line-height: .9;
         margin: 0;
     }
 
@@ -1018,13 +1066,17 @@ footer p a:hover {
     .vercel-logo img {
         height: 12px;
     }
+
+    .intro-title p {
+        font-size: var(--font-size-h5);
+    }
 }
 @media only screen and (max-width: 426px) {}
 @media only screen and (max-width: 375px) {
     .intro-title {
         font-size: var(--font-size-h5);
     }
-    .intro-subtitle {
+    .intro-subtitle2 p {
         font-size: var(--font-size-xs);
         margin: 0;
     }
@@ -1059,7 +1111,7 @@ footer p a:hover {
     .intro-title {
         font-size: var(--font-size-h5);
     }
-    .intro-subtitle {
+    .intro-subtitle2 {
         font-size: var(--font-size-xs);
         margin: 0;
     }
