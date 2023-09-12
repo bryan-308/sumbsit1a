@@ -417,7 +417,7 @@ input:checked+.slider:before {
 .intro-title p {
     /* color: var(--secondary-text); */
     /* font-family: var(--default-font-family); */
-    color: var(--title1);
+    color: var(--color1);
     font-size: var(--font-size-h1);
     font-family: var(--Tektur-font);
     line-height: .9;
@@ -425,7 +425,7 @@ input:checked+.slider:before {
 }
 
 .intro-title p:nth-child(2) {
-    color: var(--color1);
+    color: var(--title1);
     font-size: var(--font-size-large);
 }
 
