@@ -144,33 +144,99 @@ function handleSubcontent(subContent, button, closeButton) {
     });
 }
 
-const weightInput = document.getElementById("weight");
-const heightInput = document.getElementById("height");
-const result = document.getElementById("bmi");
-const meaning = document.getElementById("meaning");
+const daysAndSubjects = {
+    "m_1_content": "cc101",
+    "m_2_content": "komfil",
+    "t_1_content": "sts",
+    "t_2_content": "pathfit",
+    "t_3_content": "purcom",
+    "w_1_content": "cc100",
+    "w_2_content": "itnet",
+    "w_3_content": "cc101",
+    "th_1_content": "itnet",
+    "th_2_content": "komfil",
+    "f_1_content": "sts",
+    "f_2_content": "mmw",
+    "sat_1_content": "nstp"
+};
 
-weightInput.addEventListener("input", calculateBMI);
-heightInput.addEventListener("input", calculateBMI);
-
-function calculateBMI() {
-    const weight = parseFloat(weightInput.value);
-    const height = parseFloat(heightInput.value);
-
-    if (!isNaN(weight) && !isNaN(height) && height > 0) {
-        const bmi = weight / (height * height);
-        result.textContent = `Your BMI is: ${bmi.toFixed(3)}`;
+for (const day in daysAndSubjects) {
+    const element = document.getElementById(day);
+    if (element) {
+        element.style.whiteSpace = "pre-line";
         
-        if (bmi >= 30) {
-            meaning.textContent = "OBESE";
-        } else if (bmi >= 25 ) {
-            meaning.textContent = "OVERWEIGHT";
-        } else if (bmi >= 18.6) {
-            meaning.textContent = "NORMAL";
-        } else {
-            meaning.textContent = "UNDERWEIGHT";
-        }
-    } else {
-        result.textContent = "Enter Valid Weight and Height";
-    }
+        switch (daysAndSubjects[day]) {
+            case "cc101":
+                element.innerHTML = announcement.cc101;
+                break;
 
+            case "komfil":
+                element.innerHTML = announcement.komfil;
+                break;
+
+            case "sts":
+                element.innerHTML = announcement.sts;
+                break;
+                
+            case "itnet":
+                element.innerHTML = announcement.itnet;
+                break;
+
+            case "pathfit":
+                element.innerHTML = announcement.pathfit;
+                break;
+
+            case "purcom":
+                element.innerHTML = announcement.purcom;
+                break;
+
+            case "cc100":
+                element.innerHTML = announcement.cc100;
+                break;
+
+            case "mmw":
+                element.innerHTML = announcement.mmw;
+                break;
+
+            case "nstp":
+                element.innerHTML = announcement.nstp;
+                break;
+            default:
+                element.innerHTML = "";
+                break;
+        }
+    }
 }
+
+// m2.style.whiteSpace = "pre-line";
+
+// const weightInput = document.getElementById("weight");
+// const heightInput = document.getElementById("height");
+// const result = document.getElementById("bmi");
+// const meaning = document.getElementById("meaning");
+
+// weightInput.addEventListener("input", calculateBMI);
+// heightInput.addEventListener("input", calculateBMI);
+
+// function calculateBMI() {
+//     const weight = parseFloat(weightInput.value);
+//     const height = parseFloat(heightInput.value);
+
+//     if (!isNaN(weight) && !isNaN(height) && height > 0) {
+//         const bmi = weight / (height * height);
+//         result.innerHTML = `Your BMI is: ${bmi.toFixed(3)}`;
+
+//         if (bmi >= 30) {
+//             meaning.innerHTML = "OBESE";
+//         } else if (bmi >= 25 ) {
+//             meaning.innerHTML = "OVERWEIGHT";
+//         } else if (bmi >= 18.6) {
+//             meaning.innerHTML = "NORMAL";
+//         } else {
+//             meaning.innerHTML = "UNDERWEIGHT";
+//         }
+//     } else {
+//         result.innerHTML = "Enter Valid Weight and Height";
+//     }
+
+// }

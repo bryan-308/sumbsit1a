@@ -13,20 +13,20 @@
 //}
 
 function calculateTimeUntil(targetDay, targetHour, targetMinute) {
-  const currentDate = new Date();
-  let daysUntilTarget = (targetDay - currentDate.getDay() + 7) % 7;
-  const targetDate = new Date(currentDate);
-  
-  // Check if the target day has already passed this week
-  if (daysUntilTarget === 0 && currentDate.getHours() > targetHour) {
-    // Add 7 days to move to the next week
-    daysUntilTarget = 7;
-  }
-  
-  targetDate.setDate(currentDate.getDate() + daysUntilTarget);
-  targetDate.setHours(targetHour, targetMinute, 0, 0);
+    const currentDate = new Date();
+    let daysUntilTarget = (targetDay - currentDate.getDay() + 7) % 7;
+    const targetDate = new Date(currentDate);
 
-  return targetDate - currentDate;
+    // Check if the target day has already passed this week
+    if (daysUntilTarget === 0 && currentDate.getHours() > targetHour) {
+        // Add 7 days to move to the next week
+        daysUntilTarget = 7;
+    }
+
+    targetDate.setDate(currentDate.getDate() + daysUntilTarget);
+    targetDate.setHours(targetHour, targetMinute, 0, 0);
+
+    return targetDate - currentDate;
 }
 
 function updateSchedules() {
