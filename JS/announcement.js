@@ -1,20 +1,20 @@
 const announcement = {
     
-    cc101: "123",
+    cc101: "",
 
-    komfil: "123",
+    komfil: "",
 
-    sts: "123",
+    sts: "",
 
-    itnet: "123",
+    itnet: "",
 
-    pathfit: "123",
+    pathfit: "",
 
-    purcom: "123",
+    purcom: "",
 
-    cc100: "123",
+    cc100: "",
 
-    mmw: "123",
+    mmw: "",
 
-    nstp: "123",
+    nstp: "",
 }
