@@ -10,7 +10,7 @@ const announcement = {
 
     pathfit: "",
 
-    purcom: "",
+    purcom: "- Group Performance",
 
     cc100: "",
 
