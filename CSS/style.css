@@ -1126,7 +1126,7 @@ footer p a:hover {
         font-size: var(--font-size-medium);
     }
     .intro-subtitle2 p {
-        font-size: var(--font-size-xs);
+        font-size: var(--font-size-xxs);
         line-height: .9;
         margin: 0;
     }
