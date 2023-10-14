@@ -2,19 +2,19 @@ const announcement = {
     
     cc101: "",
 
-    komfil: "",
+    komfil: "• RECITATION ( OCT. 19 THURSDAY)",
 
     sts: "",
 
-    itnet: "",
+    itnet: "• MIDTERM EXAM (MONDAY OCT 16)",
 
     pathfit: "",
 
-    purcom: "- Group Performance",
+    purcom: "• PERFORMANCE ( OCT.17) \n• REFLECTION",
 
     cc100: "",
 
-    mmw: "",
+    mmw: "• EXAM ( FRIDAY) \n•POEM ( PRINTED)",
 
-    nstp: "",
+    nstp: "• ASSIGNMENT (OCT)",
 }
