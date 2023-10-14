@@ -14,7 +14,7 @@ const announcement = {
 
     cc100: "",
 
-    mmw: "• EXAM (OCT. 20 FRIDAY) \n•POEM (PRINTED)",
+    mmw: "• EXAM (OCT. 20 FRIDAY) \n• POEM (PRINTED)",
 
     nstp: "• ASSIGNMENT (OCT. 21)",
 }
