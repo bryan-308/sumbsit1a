@@ -15,7 +15,7 @@ function calculateTimeUntil(targetDay, targetHour, targetMinute) {
 
 function updateSchedules() {
     const schedule = [
-        { day: 1, hour: 9, minute: 0 },     // Monday 9:00 AM
+        { day: 1, hour: 10, minute: 0 },     // Monday 10:00 AM
         { day: 1, hour: 13, minute: 0 },    // Monday 1:00 PM
         { day: 2, hour: 7, minute: 30 },    // Tuesday 7:30 AM
         { day: 2, hour: 10, minute: 0 },    // Tuesday 10:00 PM
