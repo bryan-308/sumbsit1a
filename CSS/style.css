@@ -926,10 +926,6 @@ input:checked+.slider:before {
     overflow-x: auto;
 }
 
-/* .content-body-buttons {
-    padding: 10px 0;
-} */
-
 .module-body,
 .topic-body,
 .content-header p {
@@ -1040,6 +1036,7 @@ input:checked+.slider:before {
 }
 
 .copy-text-button {
+    color: var(--card-active-text);
     border: 1px solid lightgrey;
     width: fit-content;
     border-radius: 5px;
@@ -1056,6 +1053,7 @@ input:checked+.slider:before {
 }
 
 .help-button {
+    color: var(--card-active-text);
     border: none;
     background: none;
     width: fit-content;
@@ -1065,7 +1063,7 @@ input:checked+.slider:before {
 
 .help-button a,
 .copy-text-button {
-    color: var(--active-text);
+    color: var(--card-active-text);
 }
 
 .help-button a:hover {
