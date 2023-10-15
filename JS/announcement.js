@@ -10,7 +10,7 @@ const announcement = {
 
     pathfit: "\n• EXAM (OCT. 17 TUESDAY)",
 
-    purcom: "\n• PERFORMANCE (OCT.17 TUESDAY) \n• REFLECTION",
+    purcom: "\n• PERFORMANCE (OCT.17 TUESDAY) \n \n• REFLECTION \n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing",
 
     cc100: "",
 
