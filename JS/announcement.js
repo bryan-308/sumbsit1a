@@ -18,3 +18,5 @@ const announcement = {
 
     nstp: "\n• ASSIGNMENT (OCT. 21)",
 }
+
+// Too add newline, type "/n"
