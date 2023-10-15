@@ -216,6 +216,54 @@ for (const day in daysAndSubjects) {
     }
 }
 
+// This code should run after the page has loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const copyButtons = document.querySelectorAll('.copy-text-button');
+
+    copyButtons.forEach(button => {
+        const reminderId = button.getAttribute('data-reminder');
+        const liElement = document.querySelector(`[data-reminder-id="${reminderId}"] li`);
+        const reminderText = liElement.textContent.trim(); // Trim whitespace for accurate empty check
+
+        if (reminderText) {
+            // If there's text, the button remains visible
+        } else {
+            // If the text is empty, hide the button
+            button.classList.add('hidden');
+        }
+    });
+
+    copyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const reminderId = button.getAttribute('data-reminder');
+            const liElement = document.querySelector(`[data-reminder-id="${reminderId}"] li`);
+            const reminderText = liElement.textContent.trim(); // Trim whitespace for accurate empty check
+
+            if (reminderText) {
+                // Create a text area element and set its value to the reminder text
+                const textArea = document.createElement('textarea');
+                textArea.value = reminderText;
+
+                // Append the text area to the document
+                document.body.appendChild(textArea);
+
+                // Select the text within the text area and copy it to the clipboard
+                textArea.select();
+                document.execCommand('copy');
+
+                // Remove the text area from the document
+                document.body.removeChild(textArea);
+
+                // Optionally, provide a visual feedback to indicate the text has been copied
+                button.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fa-solid fa-clipboard"></i> Copy Text';
+                }, 1500);
+            }
+        });
+    });
+});
+
 // const weightInput = document.getElementById("weight");
 // const heightInput = document.getElementById("height");
 // const result = document.getElementById("bmi");
