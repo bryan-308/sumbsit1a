@@ -314,7 +314,7 @@ p {
         top: 60px;
         top: 0;
         height: auto;
-        box-shadow: var(--nav-shadow);
+        /* box-shadow: var(--nav-shadow); */
         margin: 60px 0 0 0;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
