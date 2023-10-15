@@ -515,7 +515,7 @@ p {
     overflow: hidden;
     z-index: var(--layer-0);
 
-    background: url(images/noise.webp) repeat, var(--primary-linear);
+    background: url(/images/noise.webp) repeat, var(--primary-linear);
     -webkit-mask-image: var(--radial-grad);
     mask-image: var(--radial-grad);
 }
