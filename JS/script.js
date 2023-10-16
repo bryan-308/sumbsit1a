@@ -51,32 +51,32 @@ function randomValues() {
             return anime.random(-20, 20) + 'vh';
         },
         scale: function () {
-            return anime.random(0.3, 1.6);
+            return anime.random(1, 1.5);
         },
         rotate: function () {
-            return anime.random(-360, 360);
+            return anime.random(-180, 180);
         },
         duration: function () {
             return anime.random(2000, 4000);
         },
         borderRadius: [
             {
-                value: '10%'
+                value: '20%'
             },
             {
-                value: anime.random(10, 15) + '%', duration: 50
+                value: anime.random(12, 15) + '%', duration: 100
             },
             {
-                value: '50%', duration: 500
+                value: '50%', duration: 1000
             }
         ],
-        easing: 'easeOutElastic(1, .9)',
+        easing: 'easeOutElastic(.9, 1)',
     });
 }
 
 window.addEventListener('load', function () {
     randomValues();
-    setInterval(randomValues, 4000);
+    setInterval(randomValues, 6000);
 });
 
 const subContents = [
@@ -131,7 +131,7 @@ const closeButtons = [
 let activeIndex = -1; // Initialize as no active element 
 
 for (let i = 0; i < subContentButtons.length; i++) {
-    
+
     subContentButtons[i].addEventListener("click", () => {
         if (activeIndex !== -1) {
             subContents[activeIndex].classList.remove("active");
@@ -139,13 +139,13 @@ for (let i = 0; i < subContentButtons.length; i++) {
             setTimeout(() => {
                 subContents[activeIndex].classList.remove("closing");   // Remove the closing class after a delay 
             }, 300);                                                    // Adjust the timeout value to match your CSS transition duration 
-        } subContents[i].classList.toggle("active"); 
+        } subContents[i].classList.toggle("active");
         activeIndex = i;
 
     }); closeButtons[i].addEventListener("click", () => {
         subContents[i].classList.add("closing");                        // Add a class to trigger the closing transition 
         setTimeout(() => {
-            subContents[i].classList.remove("active"); 
+            subContents[i].classList.remove("active");
             subContents[i].classList.remove("closing");                 // Remove the closing class after a delay 
         }, 300);                                                        // Adjust the timeout value to match your CSS transition duration 
         activeIndex = -1;
@@ -172,40 +172,31 @@ for (const day in daysAndSubjects) {
     const element = document.getElementById(day);
     if (element) {
         element.style.whiteSpace = "pre-line";
-        
         switch (daysAndSubjects[day]) {
             case "cc101":
                 element.innerHTML = announcement.cc101;
                 break;
-
             case "komfil":
                 element.innerHTML = announcement.komfil;
                 break;
-
             case "sts":
                 element.innerHTML = announcement.sts;
                 break;
-                
             case "itnet":
                 element.innerHTML = announcement.itnet;
                 break;
-
             case "pathfit":
                 element.innerHTML = announcement.pathfit;
                 break;
-
             case "purcom":
                 element.innerHTML = announcement.purcom;
                 break;
-
             case "cc100":
                 element.innerHTML = announcement.cc100;
                 break;
-
             case "mmw":
                 element.innerHTML = announcement.mmw;
                 break;
-
             case "nstp":
                 element.innerHTML = announcement.nstp;
                 break;
@@ -216,19 +207,16 @@ for (const day in daysAndSubjects) {
     }
 }
 
-// This code should run after the page has loaded
 document.addEventListener('DOMContentLoaded', () => {
     const copyButtons = document.querySelectorAll('.copy-text-button');
 
     copyButtons.forEach(button => {
         const reminderId = button.getAttribute('data-reminder');
         const liElement = document.querySelector(`[data-reminder-id="${reminderId}"] li`);
-        const reminderText = liElement.textContent.trim(); // Trim whitespace for accurate empty check
+        const reminderText = liElement.textContent.trim();
 
         if (reminderText) {
-            // If there's text, the button remains visible
         } else {
-            // If the text is empty, hide the button
             button.classList.add('hidden');
         }
     });
@@ -237,24 +225,19 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const reminderId = button.getAttribute('data-reminder');
             const liElement = document.querySelector(`[data-reminder-id="${reminderId}"] li`);
-            const reminderText = liElement.textContent.trim(); // Trim whitespace for accurate empty check
+            const reminderText = liElement.textContent.trim();
 
             if (reminderText) {
-                // Create a text area element and set its value to the reminder text
                 const textArea = document.createElement('textarea');
                 textArea.value = reminderText;
 
-                // Append the text area to the document
                 document.body.appendChild(textArea);
 
-                // Select the text within the text area and copy it to the clipboard
                 textArea.select();
                 document.execCommand('copy');
 
-                // Remove the text area from the document
                 document.body.removeChild(textArea);
 
-                // Optionally, provide a visual feedback to indicate the text has been copied
                 button.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
                 setTimeout(() => {
                     button.innerHTML = '<i class="fa-solid fa-clipboard"></i> Copy Text';

@@ -2,20 +2,17 @@ function calculateTimeUntil(targetDay, targetHour, targetMinute) {
     const currentDate = new Date();
     let daysUntilTarget = (targetDay - currentDate.getDay() + 7) % 7;
     const targetDate = new Date(currentDate);
-
     if (daysUntilTarget === 0 && currentDate.getHours() > targetHour) {
         daysUntilTarget = 7;
     }
-
     targetDate.setDate(currentDate.getDate() + daysUntilTarget);
     targetDate.setHours(targetHour, targetMinute, 0, 0);
-
     return targetDate - currentDate;
 }
 
 function updateSchedules() {
     const schedule = [
-        { day: 1, hour: 10, minute: 0 },     // Monday 10:00 AM
+        { day: 1, hour: 10, minute: 0 },    // Monday 10:00 AM
         { day: 1, hour: 13, minute: 0 },    // Monday 1:00 PM
         { day: 2, hour: 7, minute: 30 },    // Tuesday 7:30 AM
         { day: 2, hour: 10, minute: 0 },    // Tuesday 10:00 PM
@@ -33,18 +30,15 @@ function updateSchedules() {
     for (let i = 0; i < schedule.length; i++) {
         const { day, hour, minute } = schedule[i];
         const eventTime = calculateTimeUntil(day, hour, minute);
-
         if (eventTime >= 0) {
             const days = Math.floor(eventTime / (1000 * 60 * 60 * 24));
             const hours = Math.floor((eventTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((eventTime % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((eventTime % (1000 * 60)) / 1000);
-
             let daysText = days === 1 ? "day" : "days"; // Singular or plural "day"
             let hoursText = hours === 1 ? "hour" : "hours"; // Singular or plural "hour"
             let minutesText = minutes === 1 ? "minute" : "minutes"; // Singular or plural "minute"
             let secondsText = seconds === 1 ? "second" : "seconds"; // Singular or plural "second"
-
             if (days === 0) {
                 daysText = "day";
             }
@@ -57,7 +51,6 @@ function updateSchedules() {
             if (seconds === 0) {
                 secondsText = "second";
             }
-
             const scheduleDiv = document.getElementById(`schedule${i + 1}`);
             scheduleDiv.innerHTML = `${days} ${daysText} ${hours} ${hoursText} ${minutes} ${minutesText} ${seconds} ${secondsText}`;
         } 
@@ -65,7 +58,6 @@ function updateSchedules() {
 }
 
 setInterval(updateSchedules, 1000);
-
 updateSchedules();
 
 function getDayName(day) {
