@@ -18,7 +18,7 @@ The Class Directory serves the following purposes:
   - [Font Awesome](https://fontawesome.com/) for icons
   - [Google Fonts](https://fonts.google.com/) for font family
   - [AOS Library](https://michalsnik.github.io/aos/) for smooth scrolling transitions
-  - [Anime.js](https://anime.js/) for dynamic homepage shapes
+  - [Anime.js](https://animejs.com/) for dynamic homepage shapes
 
 ## Accessing the Class Directory
 
