@@ -1,7 +1,6 @@
-# Class Directory of BSIT 1-A 📚👨‍🎓
+# Class Directory of BSIT 1-A 📚👨‍💻
 
 Welcome to the Class Directory, a user-friendly web-based platform thoughtfully designed to cater to the specific needs of BSIT 1-A CICT Students at Nueva Ecija University of Science and Technology, making academic life more organized and efficient! 🌟
-
 
 ## Purpose 📋
 
