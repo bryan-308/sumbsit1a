@@ -1,4 +1,4 @@
-# Class Directory 📚👨‍🎓
+# Class Directory of BSIT 1-A 📚👨‍🎓
 
 Welcome to the Class Directory, a user-friendly web-based platform thoughtfully designed to cater to the specific needs of BSIT 1-A CICT Students at Nueva Ecija University of Science and Technology, making academic life more organized and efficient! 🌟
 
@@ -29,8 +29,8 @@ We've harnessed the power of modern technology to bring you the Class Directory,
 
 ## Accessing the Class Directory 🌐
 
-You can easily access the Class Directory by visiting [sumacab1absit.vercel.app](https://sumacab1absit.vercel.app/). It's just a click away!
+You can easily access the Class Directory by visiting [sumacab1absit.vercel.app](https://sumacab1absit.vercel.app/).
 
 ## Acknowledgments 🙌
 
-Special thanks to our class president, AJ Capule, and secretary, Michaella Nicole Ramos, for their invaluable assistance in providing details and content for the website. 🙏 Additionally, a big shoutout to your fellow students for their generous contributions of modules, making the learning experience even more enriching. 👏
+Special thanks to our class president, AJ Capule, and secretary, Michaella Nicole Ramos, for their invaluable assistance in providing details and content for the website. 🙏 Additionally, a big thanks to fellow students for their generous contributions of modules and reviewers, making the learning experience even more enriching. 👏
