@@ -202,6 +202,13 @@ p {
     color: var(--color6);
 }
 
+.fa-house,
+.fa-users,
+.fa-calendar {
+    opacity: 0;
+    /* font-size: 0; */
+}
+
 .hamburger {
     display: none;
 }
@@ -226,7 +233,7 @@ p {
 
 .switch-container {
     display: flex;
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
 
 .toggle {
@@ -234,6 +241,10 @@ p {
     place-items: center;
     cursor: pointer;
     line-height: 1;
+    padding: 5px;
+    margin: 0;
+    border: 1px solid;
+    border-radius: 10px;
     /* background-color: #fff; */
     /* width: 56px;
     height: 56px; */
@@ -278,6 +289,12 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+    .fa-house,
+    .fa-users,
+    .fa-calendar {
+        opacity: 1;
+    }
+
     .nav-logo {
         display: block;
         background-image: var(--logo-image);
@@ -388,18 +405,23 @@ p {
 }
 
 .home-content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    padding: 0 20px;
-    align-items: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* padding: 0 20px; */
     overflow: hidden;
 }
 
 .intro-title {
     font-weight: 700;
+}
+
+.intro-text {
+    padding: 0 20px;
 }
 
 .intro-title p {
@@ -498,10 +520,10 @@ p {
     justify-content: center;
     align-items: center;
     top: 50%;
-    right: 0;
-    left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: var(--layer-0);
+    /* right: 0;
+    left: 50%; */
 }
 
 .el {
@@ -750,12 +772,21 @@ p {
 
 .sub-card-top-left img {
     position: absolute;
-    top: -20px;
-    left: -25px;
+    top: -30px;
+    left: 0;
     height: 40px;
     opacity: 1;
     transform: rotate(-45deg);
+    animation: helloKitty 2s linear infinite;
     z-index: var(--layer-3);
+}
+
+@keyframes helloKitty {
+    0% { transform: rotate(3deg);}
+    25% { transform: rotate(-5deg);}
+    50% { transform: rotate(3deg);}
+    75% { transform: rotate(-5deg);}
+    100% { transform: rotate(3deg);}
 }
 
 .sub-card-top-left p,
@@ -1242,6 +1273,7 @@ footer p a:hover {
         top: -30px;
         left: 0;
         transform: rotate(0deg);
+        animation: helloKitty 2s linear infinite;
         z-index: var(--layer-4);
     }
 }
