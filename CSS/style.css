@@ -126,7 +126,7 @@
     --color5: #bc1e10;
     --color2: #F88820;
     --color3: #F0C820;
-    --color6: #13d0d0;
+    --color6: #00ffff;
 
     --footer-bg: #252422;
     --title1: #ea9a06;
@@ -135,7 +135,7 @@
     --slider: #001c3f;
     --slider-border: #b4b0ff;
 
-    --primary-bg: #0e0e10;
+    --primary-bg: #1b1b1b;
     --secondary-bg: #121213;
 
     --nav-shadow: 0;
@@ -170,7 +170,6 @@ p {
     height: 60px;
     width: 100%;
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
     z-index: 99;
 }
 
@@ -291,7 +290,16 @@ p {
 
     .nav-logo img {
         height: 40px;
-        filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3))
+        filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+    }
+
+    .nav-logo img:nth-child(2) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 40px;
+        animation: rotate 20s linear infinite;
+        filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
     }
 
     .overlay.active {
@@ -314,7 +322,7 @@ p {
         top: 60px;
         top: 0;
         height: auto;
-        /* box-shadow: var(--nav-shadow); */
+        box-shadow: var(--nav-shadow);
         margin: 60px 0 0 0;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -649,9 +657,11 @@ p {
 
 .sched-wrapper {
     display: flex;
-    width: 100%;
+    height: auto;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .sched-header {
@@ -756,6 +766,7 @@ p {
 }
 
 .schedule {
+    -wedkit-text-wrap: wrap;
     width: 300px;
 }
 
@@ -783,12 +794,41 @@ p {
     transition: var(--gen-transition);
 }
 
+.sub-card-top-right img:nth-child(2) {
+    height: 150px;
+    opacity: .3;
+    /* transition: var(--gen-transition); */
+    top: 15px;
+    left: 30px;
+    position: absolute;
+    animation: rotate 20s linear infinite;
+    transition: var(--gen-transition);
+    z-index: var(--layer-1);
+}
+
+.sub-card-top-right img:nth-child(3) {
+    height: 150px;
+    opacity: .3;
+    top: 15px;
+    left: 30px;
+    position: absolute;
+    transition: var(--gen-transition);
+    z-index: var(--layer-1);
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
 .sub-card-bottom {
+    position: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 30%;
     background: var(--card-bottom-bg);
+    z-index: var(--layer-2);
 }
 
 .sub-card-bottom-left {
