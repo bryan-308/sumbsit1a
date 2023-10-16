@@ -6,7 +6,7 @@ const announcement = {
 
     sts: "",
 
-    itnet: "\n• MIDTERM EXAM (OCT. 16 MONDAY)",
+    itnet: "\n• MIDTERM EXAM (DATE: TBA)",
 
     pathfit: "\n• EXAM (OCT. 17 TUESDAY)",
 
