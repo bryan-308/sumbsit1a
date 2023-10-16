@@ -827,11 +827,11 @@ p {
 }
 
 .sub-card-top-right img:nth-child(2) {
-    height: 200px;
+    height: 180px;
     opacity: .3;
     /* transition: var(--gen-transition); */
     top: 15px;
-    left: 30px;
+    left: 15px;
     position: absolute;
     animation: rotate 20s linear infinite;
     transition: var(--gen-transition);
@@ -839,10 +839,10 @@ p {
 }
 
 .sub-card-top-right img:nth-child(3) {
-    height: 200px;
+    height: 180px;
     opacity: .3;
     top: 15px;
-    left: 30px;
+    left: 15px;
     position: absolute;
     transition: var(--gen-transition);
     z-index: var(--layer-1);
