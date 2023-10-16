@@ -827,7 +827,7 @@ p {
 }
 
 .sub-card-top-right img:nth-child(2) {
-    height: 150px;
+    height: 200px;
     opacity: .3;
     /* transition: var(--gen-transition); */
     top: 15px;
@@ -839,7 +839,7 @@ p {
 }
 
 .sub-card-top-right img:nth-child(3) {
-    height: 150px;
+    height: 200px;
     opacity: .3;
     top: 15px;
     left: 30px;
