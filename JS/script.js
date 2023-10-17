@@ -1,15 +1,15 @@
 // const checkbox = document.getElementById("checkbox"); // Assuming #checkbox is an input element
-const checkbox = document.querySelector("#checkbox");
+const hamburger = document.querySelector("#checkbox");
 const navMenu = document.querySelector(".nav-menu");
 const navMenuOverlay = document.querySelector(".overlay");
 const navLink = document.querySelectorAll(".nav-link");
 
 navLink.forEach(n => n.addEventListener("click", closeMenu));
 
-checkbox.addEventListener("click", mobileMenu);
+hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
-    if (checkbox.checked) {
+    if (hamburger.checked) {
         // The checkbox is checked, meaning the menu should be active
         navMenu.classList.add("active");
         navMenuOverlay.classList.add("active");
@@ -21,7 +21,7 @@ function mobileMenu() {
 }
 
 function closeMenu() {
-    checkbox.checked = false; // Uncheck the checkbox to close the menu
+    hamburger.checked = false; // Uncheck the checkbox to close the menu
 }
 
 const navbar = document.querySelector('.navbar');
