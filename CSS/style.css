@@ -364,7 +364,7 @@ p {
         display: block;
         cursor: pointer;
     }
-    .togglE {
+    .toggle {
         position: relative;
         width: 40px;
         cursor: pointer;
