@@ -1,4 +1,4 @@
-const hamburger = document.querySelector(".hamburger");
+const hamburger = document.querySelector("#menuToggle");
 const navMenu = document.querySelector(".nav-menu");
 const navMenuOverlay = document.querySelector(".overlay");
 const navLink = document.querySelectorAll(".nav-link");
