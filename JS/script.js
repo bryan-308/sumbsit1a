@@ -22,6 +22,8 @@ function mobileMenu() {
 
 function closeMenu() {
     hamburger.checked = false; // Uncheck the checkbox to close the menu
+    navMenu.classList.remove("active");
+    navMenuOverlay.classList.remove("active");
 }
 
 const navbar = document.querySelector('.navbar');
