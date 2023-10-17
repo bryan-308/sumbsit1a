@@ -1,21 +1,27 @@
-const hamburger = document.querySelector("#checkbox");
+const checkbox = document.getElementById("checkbox"); // Assuming #checkbox is an input element
+
 const navMenu = document.querySelector(".nav-menu");
 const navMenuOverlay = document.querySelector(".overlay");
 const navLink = document.querySelectorAll(".nav-link");
 
 navLink.forEach(n => n.addEventListener("click", closeMenu));
-hamburger.addEventListener("click", mobileMenu);
+
+checkbox.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
-//    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    navMenuOverlay.classList.toggle("active");
+    if (checkbox.checked) {
+        // The checkbox is checked, meaning the menu should be active
+        navMenu.classList.add("active");
+        navMenuOverlay.classList.add("active");
+    } else {
+        // The checkbox is not checked, meaning the menu should be inactive
+        navMenu.classList.remove("active");
+        navMenuOverlay.classList.remove("active");
+    }
 }
 
 function closeMenu() {
-//    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-    navMenuOverlay.classList.remove("active");
+    checkbox.checked = false; // Uncheck the checkbox to close the menu
 }
 
 const navbar = document.querySelector('.navbar');
