@@ -5,8 +5,7 @@ const navMenuOverlay = document.querySelector(".overlay");
 const navLink = document.querySelectorAll(".nav-link");
 
 navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-hamburger.addEventListener("click", mobileMenu);
+hamburger.addEventListener("change", mobileMenu);
 
 function mobileMenu() {
     if (hamburger.checked) {
@@ -22,8 +21,6 @@ function mobileMenu() {
 
 function closeMenu() {
     hamburger.checked = false; // Uncheck the checkbox to close the menu
-    navMenu.classList.remove("active");
-    navMenuOverlay.classList.remove("active");
 }
 
 const navbar = document.querySelector('.navbar');
