@@ -360,7 +360,7 @@ p {
         text-align: center;
     }
 
-    .hamburger {
+    #menuToggle {
         display: block;
         cursor: pointer;
     }
