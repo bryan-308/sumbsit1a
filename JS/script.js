@@ -12,14 +12,20 @@ function mobileMenu() {
         // The checkbox is checked, meaning the menu should be active
         navMenu.classList.add("active");
         navMenuOverlay.classList.add("active");
+    } else {
+        // The checkbox is not checked, meaning the menu should be inactive
+        navMenu.classList.remove("active");
+        navMenuOverlay.classList.remove("active");
     }
 }
 
 function closeMenu() {
-    hamburger.checked = false; // Uncheck the checkbox to close the menu
-    // The checkbox is not checked, meaning the menu should be inactive
-    navMenu.classList.remove("active");
-    navMenuOverlay.classList.remove("active");
+    if (hamburger.checked) {
+        hamburger.checked = false; // Uncheck the checkbox
+        // The checkbox is not checked, meaning the menu should be inactive
+        navMenu.classList.remove("active");
+        navMenuOverlay.classList.remove("active");
+    }
 }
 
 const navbar = document.querySelector('.navbar');
