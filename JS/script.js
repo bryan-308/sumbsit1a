@@ -1,5 +1,5 @@
-const checkbox = document.getElementById("checkbox"); // Assuming #checkbox is an input element
-
+// const checkbox = document.getElementById("checkbox"); // Assuming #checkbox is an input element
+const checkbox = document.querySelector("#checkbox");
 const navMenu = document.querySelector(".nav-menu");
 const navMenuOverlay = document.querySelector(".overlay");
 const navLink = document.querySelectorAll(".nav-link");
