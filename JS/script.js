@@ -52,41 +52,20 @@ navbarLinks.forEach(link => {
 });
 
 function randomValues() {
-    anime({
-        targets: '.shape-container .el',
-        translateX: function () {
-            return anime.random(-20, 20) + 'vw';
-        },
-        translateY: function () {
-            return anime.random(-20, 20) + 'vh';
-        },
-        scale: function () {
-            return anime.random(1, 1.5);
-        },
-        rotate: function () {
-            return anime.random(-180, 180);
-        },
-        duration: function () {
-            return anime.random(2000, 4000);
-        },
-        borderRadius: [
-            {
-                value: '20%'
-            },
-            {
-                value: anime.random(12, 15) + '%', duration: 100
-            },
-            {
-                value: '50%', duration: 1000
-            }
-        ],
-        easing: 'easeOutElastic(.9, 1)',
-    });
+  anime({
+    targets: '.shape-container .el',
+    translateX: anime.random(-20, 20) + 'vw',
+    translateY: anime.random(-20, 20) + 'vh',
+    scale: anime.random(1, 1.5),
+    rotate: anime.random(-45, 45),
+    duration: anime.random(1000, 2000),
+    elasticity: 200,
+  });
 }
 
 window.addEventListener('load', function () {
-    randomValues();
-    setInterval(randomValues, 6000);
+  randomValues();
+  setInterval(randomValues, 3000);
 });
 
 const subContents = [
