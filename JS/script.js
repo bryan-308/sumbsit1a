@@ -287,3 +287,30 @@ document.addEventListener('DOMContentLoaded', () => {
 //     }
 
 // }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyImages = document.querySelectorAll(".lazy-load");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const lazyImage = entry.target;
+          lazyImage.src = lazyImage.getAttribute("data-src");
+          lazyImage.classList.remove("lazy-load");
+          observer.unobserve(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function (lazyImage) {
+      observer.observe(lazyImage);
+    });
+  } else {
+    // Fallback for older browsers
+    lazyImages.forEach(function (lazyImage) {
+      lazyImage.src = lazyImage.getAttribute("data-src");
+      lazyImage.classList.remove("lazy-load");
+    });
+  }
+});
