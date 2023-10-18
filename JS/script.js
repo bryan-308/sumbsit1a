@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           const lazyImage = entry.target;
-          lazyImage.src = lazyImage.getAttribute("data-src");
+          lazyImage.src = lazyImage.getAttribute("data-src"); // Display the full-resolution image
           lazyImage.classList.remove("lazy-load");
           observer.unobserve(lazyImage);
         }
@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     // Fallback for older browsers
     lazyImages.forEach(function (lazyImage) {
-      lazyImage.src = lazyImage.getAttribute("data-src");
+      lazyImage.src = lazyImage.getAttribute("data-src"); // Display the full-resolution image
       lazyImage.classList.remove("lazy-load");
     });
   }
