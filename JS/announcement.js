@@ -10,11 +10,11 @@ const announcement = {
 
     pathfit: "\n• EXAM (OCT. 17 TUESDAY)",
 
-    purcom: "\n• PERFORMANCE (OCT.17 TUESDAY) \n \n• REFLECTION \n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing",
+    purcom: "\n• PERFORMANCE (NOV. 7 TUESDAY) \n \n• REFLECTION \n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing",
 
     cc100: "",
 
-    mmw: "\n• EXAM (OCT. 20 FRIDAY) \n• POEM (PRINTED)",
+    mmw: "\n• EXAM (NOV. 10 FRIDAY) \n• POEM (PRINTED)",
 
     nstp: "\n• ASSIGNMENT (OCT. 21)",
 }
