@@ -6,9 +6,9 @@ const announcement = {
 
     sts: "",
 
-    itnet: "\n",
+    itnet: "",
 
-    pathfit: "\n• EXAM (OCT. 17 TUESDAY)",
+    pathfit: "",
 
     purcom: "\n• PERFORMANCE (NOV. 7 TUESDAY) \n \n• REFLECTION \n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing",
 
