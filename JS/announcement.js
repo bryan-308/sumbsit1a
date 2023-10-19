@@ -2,11 +2,11 @@ const announcement = {
     
     cc101: "",
 
-    komfil: "\n• RECITATION (OCT. 19 THURSDAY)",
+    komfil: "",
 
     sts: "",
 
-    itnet: "\n• MIDTERM EXAM (DATE: TBA)",
+    itnet: "\n",
 
     pathfit: "\n• EXAM (OCT. 17 TUESDAY)",
 
