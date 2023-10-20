@@ -80,8 +80,8 @@ const announcement = {
         { 
             text: "PERFORMANCE (NOV. 7 TUESDAY)\n", 
             status: "urgent", 
-            datetime: "2023-11-20T13:00:00", 
-            range: 4 
+            datetime: "Tue Nov 17 2023 13:00:00", 
+            range: 240 
         },
         { 
             text: "REFLECTION \n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing\n", 
@@ -98,7 +98,7 @@ const announcement = {
         { 
             text: "EXAM (NOV. 10 FRIDAY) \n", 
             status: "urgent", 
-            datetime: "2023-11-10T13:00:00", 
+            datetime: "Fri Nov 10 2023 13:00:00", 
             range: 1 
         },
         { 
@@ -108,14 +108,14 @@ const announcement = {
         { 
             text: "[Test Reminder in-progress] \n", 
             status: "urgent", 
-            datetime: "2023-10-20T21:14:00", 
+            datetime: "Fri Oct 20 2023 21:40:00", 
             range: 2 
         },
         { 
             text: "[Test Reminder done] \n", 
-            status: "done", 
-            datetime: "2023-10-20T17:30:00", 
-            range: 0 
+            status: "urgent", 
+            datetime: "Fri Oct 20 2023 21:38:00", 
+            range: 1 
         }
     ],
     nstp: [
