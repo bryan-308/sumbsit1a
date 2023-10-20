@@ -213,11 +213,11 @@ for (const day in daysAndSubjects) {
 function getStatusColor(status) {
     switch (status) {
         case "urgent":
-            return "red";
+            return "#D50000";
         case "in-progress":
-            return "yellow";
+            return "#FF8F00";
         case "done":
-            return "green";
+            return "#00C853";
         case "basic":
             return "gray";
         default:
