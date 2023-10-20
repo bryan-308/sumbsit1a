@@ -229,13 +229,14 @@ function updateStatus() {
                 item.status = "in-progress";
             } else if (item.status === "in-progress" && item.range > 0 && timeDiffMinutes >= item.range) {
                 item.status = "done";
-                item.range = 0;
+                item.range = 0; // Reset the range
             }
         });
     }
 }
 
-setInterval(updateStatus, 10000);
+setInterval(updateStatus, 60000);
+updateStatus();
 
 for (const day in daysAndSubjects) {
     const element = document.getElementById(day);
