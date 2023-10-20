@@ -226,7 +226,7 @@ function getStatusColor(status) {
         case "basic":
             return "gray";
         default:
-            return "blue";
+            return "";
     }
 }
 
