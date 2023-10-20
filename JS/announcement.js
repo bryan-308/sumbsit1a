@@ -1,98 +1,98 @@
 const announcement = {
     cc101: [
         { 
-            text: "Examination (urgent)", 
-            status: "urgent", 
-            datetime: "2023-12-31T12:30:00", 
-            range: 24 
+            text: "", 
+            status: "", 
+            datetime: "", 
+            range: null 
         },
         { 
-            text: "Assignment Due (basic)", 
-            status: "basic" 
+            text: "", 
+            status: "" 
         }
     ],
     komfil: [
         { 
-            text: "Urgent Announcement", 
-            status: "urgent", 
-            datetime: "2023-11-25T15:30:00", 
-            range: 12 
+            text: "", 
+            status: "", 
+            datetime: "", 
+            range: null 
         },
         { 
-            text: "Regular Reminder", 
-            status: "basic" 
+            text: "", 
+            status: "" 
         }
     ],
     sts: [
         { 
-            text: "Important Event (urgent)", 
-            status: "urgent", 
-            datetime: "2023-12-15T10:00:00", 
-            range: 6 
+            text: "", 
+            status: "", 
+            datetime: "", 
+            range: null 
         },
         { 
-            text: "Regular Class (basic)", 
-            status: "basic" 
+            text: "", 
+            status: "" 
         }
     ],
     itnet: [
         { 
-            text: "Networking Project (basic)", 
-            status: "basic" 
+            text: "", 
+            status: "" 
         }
     ],
     pathfit: [
         { 
-            text: "Performance (urgent)", 
-            status: "urgent", 
-            datetime: "2023-11-07T10:00:00", 
-            range: 1.5 
+            text: "", 
+            status: "", 
+            datetime: "", 
+            range: null 
         },
         { 
-            text: "Reflection (basic)", 
-            status: "basic" 
+            text: "", 
+            status: "" 
         }
     ],
     purcom: [
         { 
-            text: "Performance (urgent)", 
+            text: "PERFORMANCE (NOV. 7 TUESDAY)\n", 
             status: "urgent", 
             datetime: "2023-11-20T13:00:00", 
             range: 4 
         },
         { 
-            text: "Reflection (basic)", 
-            status: "basic" 
+            text: "REFLECTION \n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing\n", 
+            status: "basic"
         }
     ],
     cc100: [
         { 
-            text: "Assignment Due (basic)", 
-            status: "basic" 
+            text: "", 
+            status: "" 
         }
     ],
     mmw: [
         { 
-            text: "EXAM (NOV. 10 FRIDAY)", 
+            text: "EXAM (NOV. 10 FRIDAY) \n", 
             status: "urgent", 
             datetime: "2023-11-10T13:00:00", 
             range: 1 
         },
         { 
-            text: "Poem (Printed)", 
+            text: "Poem (Printed) \n", 
             status: "basic" 
         },
         { 
-            text: "[Test Reminder in-progress]", 
+            text: "[Test Reminder in-progress] \n", 
             status: "urgent", 
-            datetime: "2023-10-20T22:24:00", 
+            datetime: "2023-10-20T21:14:00", 
             range: 2 
         },
         { 
-            text: "[Test Reminder done]", 
+            text: "[Test Reminder done] \n", 
             status: "urgent", 
-            datetime: "2023-10-20T22:25:00", 
-            range: 2 
+            datetime: "2023-10-20T17:30:00", 
+            range: null 
         }
     ],
     nstp: [
