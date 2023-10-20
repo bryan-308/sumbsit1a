@@ -179,7 +179,7 @@ function updateStatus() {
     }
 }
 
-setInterval(updateStatus, 60000);
+setInterval(updateStatus, 100);
 updateStatus();
 
 const daysAndSubjects = {
