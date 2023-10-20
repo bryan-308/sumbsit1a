@@ -223,26 +223,19 @@ function updateStatus() {
     for (const subject in announcement) {
         const subjectAnnouncements = announcement[subject];
         subjectAnnouncements.forEach((item) => {
-            if (item.status === "urgent") {
-                const announcementDate = new Date(item.datetime + " UTC"); // Convert to a specific time zone (e.g., UTC)
-                const timeDiffMinutes = Math.floor((announcementDate - now) / (1000 * 60)); // Convert to minutes
-                if (timeDiffMinutes <= 0) {
-                    item.status = "in-progress";
-                }
-            } else if (item.status === "in-progress" && item.range > 0) {
-                const announcementDate = new Date(item.datetime + " UTC"); // Convert to a specific time zone
-                const timeDiffMinutes = Math.floor((now - announcementDate) / (1000 * 60)); // Convert to minutes
-                if (timeDiffMinutes >= item.range) {
-                    item.status = "done";
-                    item.range = 0; // Reset the range
-                }
+            const announcementDate = new Date(item.datetime);
+            const timeDiffMinutes = Math.floor((announcementDate - now) / (1000 * 60)); // Convert to minutes
+            if (item.status === "urgent" && timeDiffMinutes <= 0) {
+                item.status = "in-progress";
+            } else if (item.status === "in-progress" && item.range > 0 && timeDiffMinutes >= item.range) {
+                item.status = "done";
+                item.range = 0;
             }
         });
     }
 }
 
-setInterval(updateStatus, 60000);
-updateStatus();
+setInterval(updateStatus, 10000);
 
 for (const day in daysAndSubjects) {
     const element = document.getElementById(day);
