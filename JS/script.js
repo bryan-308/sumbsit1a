@@ -162,6 +162,25 @@ for (let i = 0; i < subContentButtons.length; i++) {
     });
 }
 
+function updateStatus() {
+    const now = new Date();
+    for (const subject in announcement) {
+        announcement[subject].forEach((item) => {
+            if (item.status === "urgent" || item.status === "in-progress") {
+                const announcementDate = new Date(item.datetime);
+                const timeDiff = Math.abs(now - announcementDate) / 36e5;
+                if (item.status === "urgent") {
+                    if (timeDiff > 0) {
+                        item.status = "in-progress";
+                    }
+                } else if (item.status === "in-progress" && timeDiff > item.range) {
+                    item.status = "done";
+                }
+            }
+        });
+    }
+}
+
 const daysAndSubjects = {
     "m_1_content": "cc101",
     "m_2_content": "komfil",
@@ -182,38 +201,27 @@ for (const day in daysAndSubjects) {
     const element = document.getElementById(day);
     if (element) {
         element.style.whiteSpace = "pre-line";
-        switch (daysAndSubjects[day]) {
-            case "cc101":
-                element.innerHTML = announcement.cc101;
-                break;
-            case "komfil":
-                element.innerHTML = announcement.komfil;
-                break;
-            case "sts":
-                element.innerHTML = announcement.sts;
-                break;
-            case "itnet":
-                element.innerHTML = announcement.itnet;
-                break;
-            case "pathfit":
-                element.innerHTML = announcement.pathfit;
-                break;
-            case "purcom":
-                element.innerHTML = announcement.purcom;
-                break;
-            case "cc100":
-                element.innerHTML = announcement.cc100;
-                break;
-            case "mmw":
-                element.innerHTML = announcement.mmw;
-                break;
-            case "nstp":
-                element.innerHTML = announcement.nstp;
-                break;
-            default:
-                element.innerHTML = "";
-                break;
-        }
+        const subject = daysAndSubjects[day];
+        let content = "";
+        announcement[subject].forEach((item) => {
+            content += `<span class="status-circle" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text}\n`;
+        });
+        element.innerHTML = content;
+    }
+}
+
+function getStatusColor(status) {
+    switch (status) {
+        case "urgent":
+            return "red";
+        case "in-progress":
+            return "yellow";
+        case "done":
+            return "green";
+        case "basic":
+            return "gray";
+        default:
+            return "blue";
     }
 }
 
