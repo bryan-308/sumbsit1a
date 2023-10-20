@@ -173,7 +173,7 @@ function updateStatus() {
                 item.status = "in-progress";
             } else if (item.status === "in-progress" && item.range > 0 && timeDiffMinutes >= item.range) {
                 item.status = "done";
-                item.range = 0; // Reset range to 0 when status changes to "done"
+                item.range = 0; // Reset the range
             }
         });
     }
