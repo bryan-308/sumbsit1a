@@ -1101,8 +1101,8 @@ p {
 
 /* status circle */
 .status-circle {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     vertical-align: middle;
     border-radius: 50%;
     display: inline-block;
@@ -1113,7 +1113,7 @@ p {
 }
 
 .yellow {
-    background-color: #FBC02D;
+    background-color: #FF8F00;
 }
 
 .green {
