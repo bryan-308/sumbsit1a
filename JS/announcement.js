@@ -113,9 +113,9 @@ const announcement = {
         },
         { 
             text: "[Test Reminder done] \n", 
-            status: "urgent", 
+            status: "done", 
             datetime: "2023-10-20T17:30:00", 
-            range: null 
+            range: 0 
         }
     ],
     nstp: [
