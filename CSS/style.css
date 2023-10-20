@@ -1101,8 +1101,8 @@ p {
 
 /* status circle */
 .status-circle {
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
     vertical-align: middle;
     border-radius: 50%;
     display: inline-block;
