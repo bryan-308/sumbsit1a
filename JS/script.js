@@ -167,8 +167,8 @@ function updateStatus() {
     for (const subject in announcement) {
         const subjectAnnouncements = announcement[subject];
         subjectAnnouncements.forEach((item) => {
+            const announcementDate = new Date(item.datetime); // Declare it here
             if (item.status === "urgent") {
-                const announcementDate = new Date(item.datetime);
                 const timeDiffMinutes = Math.floor((announcementDate - now) / (1000 * 60)); // Convert to minutes
                 if (timeDiffMinutes <= 0) {
                     item.status = "in-progress";
