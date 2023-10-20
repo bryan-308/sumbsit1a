@@ -102,7 +102,7 @@ const announcement = {
             range: 1 
         },
         { 
-            text: "Poem (Printed)", 
+            text: "Poem (Printed) \n", 
             status: "basic" 
         },
         { 
