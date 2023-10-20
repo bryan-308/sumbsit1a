@@ -204,7 +204,7 @@ for (const day in daysAndSubjects) {
         const subject = daysAndSubjects[day];
         let content = "";
         announcement[subject].forEach((item) => {
-            content += `<span class="status-circle" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text}\n`;
+            content += `<span class="status-circle" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text}`;
         });
         element.innerHTML = content;
     }
