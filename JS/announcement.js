@@ -78,13 +78,13 @@ const announcement = {
     ],
     purcom: [
         { 
-            text: "\n• PERFORMANCE (NOV. 7 TUESDAY)\n", 
+            text: "PERFORMANCE (NOV. 7 TUESDAY)\n", 
             status: "urgent", 
             datetime: "2023-11-20T13:00:00", 
             range: 4 
         },
         { 
-            text: "\n• REFLECTION \n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing\n", 
+            text: "REFLECTION \n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing\n", 
             status: "basic"
         }
     ],
@@ -96,13 +96,13 @@ const announcement = {
     ],
     mmw: [
         { 
-            text: "\nEXAM (NOV. 10 FRIDAY) \n", 
+            text: "EXAM (NOV. 10 FRIDAY) \n", 
             status: "urgent", 
             datetime: "2023-11-10T13:00:00", 
             range: 1 
         },
         { 
-            text: "\n[Test Reminder] \n", 
+            text: "[Test Reminder] \n", 
             status: "urgent", 
             datetime: "2023-10-20T14:25:00", 
             range: 1 
