@@ -35,21 +35,21 @@ function updateSchedules() {
             const hours = Math.floor((eventTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((eventTime % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((eventTime % (1000 * 60)) / 1000);
-            let daysText = days === 1 ? "day" : "days"; // Singular or plural "day"
-            let hoursText = hours === 1 ? "hour" : "hours"; // Singular or plural "hour"
-            let minutesText = minutes === 1 ? "minute" : "minutes"; // Singular or plural "minute"
-            let secondsText = seconds === 1 ? "second" : "seconds"; // Singular or plural "second"
+            let daysText = days === 1 ? "D" : "Ds"; // Singular or plural "day"
+            let hoursText = hours === 1 ? "Hr" : "Hrs"; // Singular or plural "hour"
+            let minutesText = minutes === 1 ? "Min" : "Mins"; // Singular or plural "minute"
+            let secondsText = seconds === 1 ? "Sec" : "Secs"; // Singular or plural "second"
             if (days === 0) {
-                daysText = "day";
+                daysText = "D";
             }
             if (hours === 0) {
-                hoursText = "hour";
+                hoursText = "Hr";
             }
             if (minutes === 0) {
-                minutesText = "minute";
+                minutesText = "Min";
             }
             if (seconds === 0) {
-                secondsText = "second";
+                secondsText = "Sec";
             }
             const scheduleDiv = document.getElementById(`schedule${i + 1}`);
             scheduleDiv.innerHTML = `${days} ${daysText} ${hours} ${hoursText} ${minutes} ${minutesText} ${seconds} ${secondsText}`;
