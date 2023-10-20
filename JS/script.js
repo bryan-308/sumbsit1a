@@ -241,7 +241,7 @@ function updateStatus() {
     }
 }
 
-setInterval(updateStatus, 1000);
+setInterval(updateStatus, 60000);
 updateStatus();
 
 for (const day in daysAndSubjects) {
