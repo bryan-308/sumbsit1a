@@ -1,121 +1,98 @@
-//const announcement = {
-    
-//    cc101: "",
-
-//    komfil: "",
-
-//    sts: "",
-
-//    itnet: "",
-
-//    pathfit: "",
-
-//    purcom: "\n• PERFORMANCE (NOV. 7 TUESDAY) \n• REFLECTION \n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing",
-
-//    cc100: "",
-
-//    mmw: "\n• EXAM (NOV. 10 FRIDAY) \n• POEM (PRINTED)",
-
-//    nstp: "\n• ASSIGNMENT (OCT. 21)",
-//}
-
-// To add newline, type "\n"
-
 const announcement = {
     cc101: [
         { 
-            text: "", 
-            status: "", 
-            datetime: "", 
-            range: null 
+            text: "Examination (urgent)", 
+            status: "urgent", 
+            datetime: "2023-12-31T12:30:00", 
+            range: 24 
         },
         { 
-            text: "", 
-            status: "" 
+            text: "Assignment Due (basic)", 
+            status: "basic" 
         }
     ],
     komfil: [
         { 
-            text: "", 
-            status: "", 
-            datetime: "", 
-            range: null 
+            text: "Urgent Announcement", 
+            status: "urgent", 
+            datetime: "2023-11-25T15:30:00", 
+            range: 12 
         },
         { 
-            text: "", 
-            status: "" 
+            text: "Regular Reminder", 
+            status: "basic" 
         }
     ],
     sts: [
         { 
-            text: "", 
-            status: "", 
-            datetime: "", 
-            range: null 
+            text: "Important Event (urgent)", 
+            status: "urgent", 
+            datetime: "2023-12-15T10:00:00", 
+            range: 6 
         },
         { 
-            text: "", 
-            status: "" 
+            text: "Regular Class (basic)", 
+            status: "basic" 
         }
     ],
     itnet: [
         { 
-            text: "", 
-            status: "" 
+            text: "Networking Project (basic)", 
+            status: "basic" 
         }
     ],
     pathfit: [
         { 
-            text: "", 
-            status: "", 
-            datetime: "", 
-            range: null 
+            text: "Performance (urgent)", 
+            status: "urgent", 
+            datetime: "2023-11-07T10:00:00", 
+            range: 1.5 
         },
         { 
-            text: "", 
-            status: "" 
+            text: "Reflection (basic)", 
+            status: "basic" 
         }
     ],
     purcom: [
         { 
-            text: "PERFORMANCE (NOV. 7 TUESDAY)\n", 
+            text: "Performance (urgent)", 
             status: "urgent", 
-            datetime: "Tue Nov 17 2023 13:00:00", 
-            range: 240 
+            datetime: "2023-11-20T13:00:00", 
+            range: 4 
         },
         { 
-            text: "REFLECTION \n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing\n", 
-            status: "basic"
+            text: "Reflection (basic)", 
+            status: "basic" 
         }
     ],
     cc100: [
         { 
-            text: "", 
-            status: "" 
+            text: "Assignment Due (basic)", 
+            status: "basic" 
         }
     ],
     mmw: [
         { 
-            text: "EXAM (NOV. 10 FRIDAY) \n", 
+            text: "EXAM (NOV. 10 FRIDAY)", 
             status: "urgent", 
-            datetime: "Fri Nov 10 2023 13:00:00", 
+            datetime: "2023-11-10T13:00:00", 
             range: 1 
         },
         { 
-            text: "Poem (Printed) \n", 
+            text: "Poem (Printed)", 
             status: "basic" 
         },
         { 
-            text: "[Test Reminder in-progress] \n", 
+            text: "[Test Reminder in-progress]", 
             status: "urgent", 
-            datetime: "2023-10-20T22:09:30", 
+            datetime: "2023-10-20T22:24:00", 
             range: 2 
         },
         { 
-            text: "[Test Reminder done] \n", 
+            text: "[Test Reminder done]", 
             status: "urgent", 
-            datetime: "2023-10-20T22:09:00", 
-            range: 1 
+            datetime: "2023-10-20T22:25:00", 
+            range: 2 
         }
     ],
     nstp: [
