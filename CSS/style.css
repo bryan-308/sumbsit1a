@@ -752,8 +752,8 @@ p {
 
 .fade-text {
     position: absolute;
-    top: 30%;
-    left: 20%;
+    bottom: 20%;
+    right: 20%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -767,16 +767,16 @@ p {
 
 .fade-text .fade-bs {
     font-family: var(--title-font);
-    font-size: var(--font-size-h3);
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--color2);
     font-weight: 600;
     font-style: italic;
+    transition: var(--gen-transition);
 }
 
 .fade-text .fade-it {
     font-family: var(--title-font);
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--color5);
     font-weight: 800;
     font-style: italic;
@@ -785,10 +785,10 @@ p {
 
 .fade-text .fade-neust {
     font-family: var(--title-font);
-    font-size: var(--font-size-h5);
-    font-size: 1rem;
+    font-size: 2rem;
     color: var(--color3);
     font-weight: 700;
+    transition: var(--gen-transition);
 }
 
 .sub-card-top-left {
