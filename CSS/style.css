@@ -745,8 +745,8 @@ p {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     height: 70%;
 }
 
