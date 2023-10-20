@@ -162,70 +162,6 @@ for (let i = 0; i < subContentButtons.length; i++) {
     });
 }
 
-function updateStatus() {
-    const now = new Date();
-    for (const subject in announcement) {
-        const subjectAnnouncements = announcement[subject];
-        subjectAnnouncements.forEach((item) => {
-            const announcementDate = new Date(item.datetime);
-            const timeDiffMinutes = Math.floor((announcementDate - now) / (1000 * 60)); // Convert to minutes
-            if (item.status === "urgent" && timeDiffMinutes <= 0) {
-                item.status = "in-progress";
-            } else if (item.status === "in-progress" && item.range > 0 && timeDiffMinutes >= item.range) {
-                item.status = "done";
-                item.range = 0; // Reset the range
-            }
-        });
-    }
-}
-
-setInterval(updateStatus, 100);
-updateStatus();
-
-const daysAndSubjects = {
-    "m_1_content": "cc101",
-    "m_2_content": "komfil",
-    "t_1_content": "sts",
-    "t_2_content": "pathfit",
-    "t_3_content": "purcom",
-    "w_1_content": "cc100",
-    "w_2_content": "itnet",
-    "w_3_content": "cc101",
-    "th_1_content": "itnet",
-    "th_2_content": "komfil",
-    "f_1_content": "sts",
-    "f_2_content": "mmw",
-    "sat_1_content": "nstp"
-};
-
-for (const day in daysAndSubjects) {
-    const element = document.getElementById(day);
-    if (element) {
-        element.style.whiteSpace = "pre-line";
-        const subject = daysAndSubjects[day];
-        let content = "";
-        announcement[subject].forEach((item) => {
-            content += `<span class="status-circle" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text}`;
-        });
-        element.innerHTML = content;
-    }
-}
-
-function getStatusColor(status) {
-    switch (status) {
-        case "urgent":
-            return "#D50000";
-        case "in-progress":
-            return "#FF8F00";
-        case "done":
-            return "#00C853";
-        case "basic":
-            return "gray";
-        default:
-            return "";
-    }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const copyButtons = document.querySelectorAll('.copy-text-button');
 
@@ -265,6 +201,70 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+const daysAndSubjects = {
+    "m_1_content": "cc101",
+    "m_2_content": "komfil",
+    "t_1_content": "sts",
+    "t_2_content": "pathfit",
+    "t_3_content": "purcom",
+    "w_1_content": "cc100",
+    "w_2_content": "itnet",
+    "w_3_content": "cc101",
+    "th_1_content": "itnet",
+    "th_2_content": "komfil",
+    "f_1_content": "sts",
+    "f_2_content": "mmw",
+    "sat_1_content": "nstp"
+};
+
+function updateStatus() {
+    const now = new Date();
+    for (const subject in announcement) {
+        const subjectAnnouncements = announcement[subject];
+        subjectAnnouncements.forEach((item) => {
+            const announcementDate = new Date(item.datetime);
+            const timeDiffMinutes = Math.floor((announcementDate - now) / (1000 * 60)); // Convert to minutes
+            if (item.status === "urgent" && timeDiffMinutes <= 0) {
+                item.status = "in-progress";
+            } else if (item.status === "in-progress" && item.range > 0 && timeDiffMinutes >= item.range) {
+                item.status = "done";
+                item.range = 0; // Reset the range
+            }
+        });
+    }
+}
+
+setInterval(updateStatus, 100);
+updateStatus();
+
+for (const day in daysAndSubjects) {
+    const element = document.getElementById(day);
+    if (element) {
+        element.style.whiteSpace = "pre-line";
+        const subject = daysAndSubjects[day];
+        let content = "";
+        announcement[subject].forEach((item) => {
+            content += `<span class="status-circle" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text}`;
+        });
+        element.innerHTML = content;
+    }
+}
+
+function getStatusColor(status) {
+    switch (status) {
+        case "urgent":
+            return "#D50000";
+        case "in-progress":
+            return "#FF8F00";
+        case "done":
+            return "#00C853";
+        case "basic":
+            return "gray";
+        default:
+            return "";
+    }
+}
 
 // const weightInput = document.getElementById("weight");
 // const heightInput = document.getElementById("height");
