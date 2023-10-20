@@ -1099,6 +1099,35 @@ p {
     text-decoration: underline;
 }
 
+/* status circle */
+.status-circle {
+    width: var(--font-size-xxs);
+    height: var(--font-size-xxs);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.blue {
+    background-color: blue;
+}
+
 .btn-primary {
     padding: 0 0.5rem;
     border-radius: 5px;
