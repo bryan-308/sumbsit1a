@@ -1009,6 +1009,7 @@ p {
 }
 
 .content-body {
+    position: relative;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
