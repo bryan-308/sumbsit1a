@@ -752,7 +752,7 @@ p {
 
 .fade-text {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 20%;
     display: flex;
     flex-direction: column;
@@ -857,8 +857,8 @@ p {
 }
 
 .sub-card-top-right img:nth-child(2) {
-    height: 160px;
-    opacity: .3;
+    height: 140px;
+    opacity: .4;
     /* transition: var(--gen-transition); */
     top: 15px;
     right: 15px;
@@ -869,8 +869,8 @@ p {
 }
 
 .sub-card-top-right img:nth-child(3) {
-    height: 160px;
-    opacity: .3;
+    height: 140px;
+    opacity: .4;
     top: 15px;
     right: 15px;
     position: absolute;
