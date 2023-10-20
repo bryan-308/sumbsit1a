@@ -165,21 +165,26 @@ for (let i = 0; i < subContentButtons.length; i++) {
 function updateStatus() {
     const now = new Date();
     for (const subject in announcement) {
-        announcement[subject].forEach((item) => {
-            if (item.status === "urgent" || item.status === "in-progress") {
+        const subjectAnnouncements = announcement[subject];
+        subjectAnnouncements.forEach((item) => {
+            if (item.status === "urgent") {
                 const announcementDate = new Date(item.datetime);
-                const timeDiff = Math.abs(now - announcementDate) / 36e5;
-                if (item.status === "urgent") {
-                    if (timeDiff > 0) {
-                        item.status = "in-progress";
-                    }
-                } else if (item.status === "in-progress" && timeDiff > item.range) {
+                const timeDiffMinutes = Math.floor((announcementDate - now) / (1000 * 60)); // Convert to minutes
+                if (timeDiffMinutes <= 0) {
+                    item.status = "in-progress";
+                }
+            } else if (item.status === "in-progress" && item.range > 0) {
+                const timeDiffMinutes = Math.floor((now - announcementDate) / (1000 * 60)); // Convert to minutes
+                if (timeDiffMinutes >= item.range) {
                     item.status = "done";
                 }
             }
         });
     }
 }
+
+setInterval(updateStatus, 60000);
+updateStatus();
 
 const daysAndSubjects = {
     "m_1_content": "cc101",
