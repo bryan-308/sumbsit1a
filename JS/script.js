@@ -238,6 +238,8 @@ function updateStatus() {
     updateDisplayedContent();
 }
 
+updateStatus();
+
 for (const day in daysAndSubjects) {
     const element = document.getElementById(day);
     if (element) {
