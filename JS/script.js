@@ -224,12 +224,14 @@ function updateStatus() {
         const subjectAnnouncements = announcement[subject];
         subjectAnnouncements.forEach((item) => {
             const announcementDate = new Date(item.datetime);
-            const timeDiffMinutes = Math.floor((announcementDate - now) / (1000 * 60)); // Convert to minutes
+            const timeDiffMinutes = Math.floor((announcementDate - now) / (1000 * 60); // Convert to minutes
             if (item.status === "urgent" && timeDiffMinutes <= 0) {
                 item.status = "in-progress";
-            } else if (item.status === "in-progress" && timeDiffMinutes >= item.range) {
-                item.status = "done";
-                item.range = 0; // Reset the range
+            } else if (item.status === "in-progress") {
+                if (timeDiffMinutes >= item.range) {
+                    item.status = "done";
+                    item.range = 0; // Reset the range
+                }
             }
         });
     }
