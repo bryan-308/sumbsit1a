@@ -771,6 +771,7 @@ p {
     color: var(--color2);
     font-weight: 600;
     font-style: italic;
+    transform: skewX(10deg);
     transition: var(--gen-transition);
 }
 
@@ -780,6 +781,7 @@ p {
     color: var(--color5);
     font-weight: 800;
     font-style: italic;
+    transform: skewX(10deg);
     transition: var(--gen-transition);
 }
 
