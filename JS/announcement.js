@@ -85,13 +85,13 @@ const announcement = {
         { 
             text: "[Test Reminder in-progress] \n", 
             status: "urgent", 
-            datetime: "2023-10-20T22:50:00", 
+            datetime: "2023-10-21T09:12:00", 
             range: 2 
         },
         { 
             text: "[Test Reminder done] \n", 
-            status: "done", 
-            datetime: "2023-10-20T17:30:00", 
+            status: "urgent", 
+            datetime: "2023-10-21T09:12:00", 
             range: 2
         }
     ],
