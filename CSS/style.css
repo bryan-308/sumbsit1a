@@ -765,24 +765,23 @@ p {
     line-height: .8;
 }
 
+/* Add italic effect with oblique */
 .fade-text .fade-bs {
-    font-family: var(--title-font);
-    font-size: 3rem;
-    color: var(--color2);
-    font-weight: 600;
-    font-style: italic;
-    transform: skewX(10deg);
-    transition: var(--gen-transition);
+  font-family: var(--title-font);
+  font-size: 3rem;
+  color: var(--color2);
+  font-weight: 600;
+  font-style: oblique 10deg; /* Adjust the angle as desired */
+  transition: var(--gen-transition);
 }
 
 .fade-text .fade-it {
-    font-family: var(--title-font);
-    font-size: 5rem;
-    color: var(--color5);
-    font-weight: 800;
-    font-style: italic;
-    transform: skewX(10deg);
-    transition: var(--gen-transition);
+  font-family: var(--title-font);
+  font-size: 5rem;
+  color: var(--color5);
+  font-weight: 800;
+  font-style: oblique 10deg; /* Adjust the angle as desired */
+  transition: var(--gen-transition);
 }
 
 .fade-text .fade-neust {
