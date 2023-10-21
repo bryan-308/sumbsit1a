@@ -229,12 +229,10 @@ function updateStatus() {
                 item.status = "in-progress";
             } else if (item.status === "in-progress" && item.range > 0 && timeDiffMinutes >= item.range) {
                 item.status = "done";
-                item.range = 0; // Reset the range to 0 when it turns to done
+                item.range = 0; // Reset the range
             }
         });
     }
-
-    // After updating the statuses, update the displayed content based on the modified statuses
     for (const day in daysAndSubjects) {
         const element = document.getElementById(day);
         if (element) {
@@ -249,11 +247,7 @@ function updateStatus() {
     }
 }
 
-// Define the interval (in milliseconds) for updating the status
-const updateInterval = 10000; // 10 seconds
-
-// Set up an interval to periodically update the status
-setInterval(updateStatus, updateInterval);
+setInterval(updateStatus, 10000); // Update every 10 seconds
 
 function getStatusColor(status) {
     switch (status) {
