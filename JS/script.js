@@ -227,12 +227,18 @@ function updateStatus() {
             const timeDiffMinutes = Math.floor((announcementDate - now) / (1000 * 60)); // Convert to minutes
             if (item.status === "urgent" && timeDiffMinutes <= 0) {
                 item.status = "in-progress";
-            } else if (item.status === "in-progress" && item.range > 0 && timeDiffMinutes >= item.range) {
+            } else if (item.status === "in-progress" && timeDiffMinutes >= item.range) {
                 item.status = "done";
                 item.range = 0; // Reset the range
             }
         });
     }
+
+    // After updating the statuses, update the displayed content
+    updateDisplayedContent();
+}
+
+function updateDisplayedContent() {
     for (const day in daysAndSubjects) {
         const element = document.getElementById(day);
         if (element) {
