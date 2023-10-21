@@ -218,13 +218,15 @@ const daysAndSubjects = {
     "sat_1_content": "nstp"
 };
 
+let updateStatusInterval; // Define the interval variable
+
 function updateStatus() {
     const now = new Date();
     for (const subject in announcement) {
         const subjectAnnouncements = announcement[subject];
         subjectAnnouncements.forEach((item) => {
             const announcementDate = new Date(item.datetime);
-            const timeDiffMinutes = Math.floor((announcementDate - now) / (1000 * 60); // Convert to minutes
+            const timeDiffMinutes = Math.floor((announcementDate - now) / (1000 * 60)); // Convert to minutes
             if (item.status === "urgent" && timeDiffMinutes <= 0) {
                 item.status = "in-progress";
             } else if (item.status === "in-progress") {
@@ -255,8 +257,6 @@ function updateDisplayedContent() {
     }
 }
 
-setInterval(updateStatus, 10000); // Update every 10 seconds
-
 function getStatusColor(status) {
     switch (status) {
         case "urgent":
@@ -271,6 +271,11 @@ function getStatusColor(status) {
             return "";
     }
 }
+
+// Clear existing interval (if any) and start a new one
+clearInterval(updateStatusInterval);
+updateStatusInterval = setInterval(updateStatus, 10000);
+
 
 // const weightInput = document.getElementById("weight");
 // const heightInput = document.getElementById("height");
