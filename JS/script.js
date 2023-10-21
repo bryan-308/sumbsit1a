@@ -218,119 +218,68 @@ const daysAndSubjects = {
     "sat_1_content": "nstp"
 };
 
-let updateStatusInterval; // Define the interval variable
-
-function updateStatus() {
-    const now = new Date();
-    for (const subject in announcement) {
-        const subjectAnnouncements = announcement[subject];
-        subjectAnnouncements.forEach((item) => {
-            const announcementDate = new Date(item.datetime);
-            const timeDiffMinutes = Math.floor((announcementDate - now) / (1000 * 60)); // Convert to minutes
-            if (item.status === "urgent" && timeDiffMinutes <= 0) {
-                item.status = "in-progress";
-            } else if (item.status === "in-progress") {
-                if (timeDiffMinutes >= item.range) {
-                    item.status = "done";
-                    item.range = 0; // Reset the range
-                }
-            }
-        });
-    }
-
-    // After updating the statuses, update the displayed content
-    updateDisplayedContent();
-}
-
-function updateDisplayedContent() {
-    for (const day in daysAndSubjects) {
-        const element = document.getElementById(day);
-        if (element) {
-            element.style.whiteSpace = "pre-line";
-            const subject = daysAndSubjects[day];
-            let content = "";
-            announcement[subject].forEach((item) => {
-                content += `<span class="status-circle" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text}`;
-            });
-            element.innerHTML = content;
+for (const day in daysAndSubjects) {
+    const element = document.getElementById(day);
+    if (element) {
+        element.style.whiteSpace = "pre-line";
+        switch (daysAndSubjects[day]) {
+            case "cc101":
+                element.innerHTML = announcement.cc101;
+            break;
+            case "komfil":
+                element.innerHTML = announcement.komfil;
+            break;
+            case "sts":
+                element.innerHTML = announcement.sts;
+            break;
+            case "itnet":
+                element.innerHTML = announcement.itnet;
+            break;
+            case "pathfit":
+                element.innerHTML = announcement.pathfit;
+            break;
+            case "purcom":
+                element.innerHTML = announcement.purcom;
+            break;
+            case "cc100":
+                element.innerHTML = announcement.cc100;
+            break;
+            case "mmw":
+                element.innerHTML = announcement.mmw;
+            break;
+            case "nstp":
+                element.innerHTML = announcement.nstp;
+            break;
+            default:
+                element.innerHTML = "";
+            break;
         }
     }
 }
-
-function getStatusColor(status) {
-    switch (status) {
-        case "urgent":
-            return "#D50000";
-        case "in-progress":
-            return "#FF8F00";
-        case "done":
-            return "#00C853";
-        case "basic":
-            return "gray";
-        default:
-            return "";
-    }
-}
-
-// Clear existing interval (if any) and start a new one
-clearInterval(updateStatusInterval);
-updateStatusInterval = setInterval(updateStatus, 10000);
-
-
-// const weightInput = document.getElementById("weight");
-// const heightInput = document.getElementById("height");
-// const result = document.getElementById("bmi");
-// const meaning = document.getElementById("meaning");
-
-// weightInput.addEventListener("input", calculateBMI);
-// heightInput.addEventListener("input", calculateBMI);
-
-// function calculateBMI() {
-//     const weight = parseFloat(weightInput.value);
-//     const height = parseFloat(heightInput.value);
-
-//     if (!isNaN(weight) && !isNaN(height) && height > 0) {
-//         const bmi = weight / (height * height);
-//         result.innerHTML = `Your BMI is: ${bmi.toFixed(3)}`;
-
-//         if (bmi >= 30) {
-//             meaning.innerHTML = "OBESE";
-//         } else if (bmi >= 25 ) {
-//             meaning.innerHTML = "OVERWEIGHT";
-//         } else if (bmi >= 18.6) {
-//             meaning.innerHTML = "NORMAL";
-//         } else {
-//             meaning.innerHTML = "UNDERWEIGHT";
-//         }
-//     } else {
-//         result.innerHTML = "Enter Valid Weight and Height";
-//     }
-
-// }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const lazyImages = document.querySelectorAll(".lazy-load");
+    const lazyImages = document.querySelectorAll(".lazy-load");
 
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(function (entries, observer) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          const lazyImage = entry.target;
-          lazyImage.src = lazyImage.getAttribute("data-src"); // Display the full-resolution image
-          lazyImage.classList.remove("lazy-load");
-          observer.unobserve(lazyImage);
-        }
-      });
-    });
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    const lazyImage = entry.target;
+                    lazyImage.src = lazyImage.getAttribute("data-src"); // Display the full-resolution image
+                    lazyImage.classList.remove("lazy-load");
+                    observer.unobserve(lazyImage);
+                }
+            });
+        });
 
-    lazyImages.forEach(function (lazyImage) {
-      observer.observe(lazyImage);
-    });
-  } else {
-    // Fallback for older browsers
-    lazyImages.forEach(function (lazyImage) {
-      lazyImage.src = lazyImage.getAttribute("data-src"); // Display the full-resolution image
-      lazyImage.classList.remove("lazy-load");
-    });
-  }
+        lazyImages.forEach(function (lazyImage) {
+            observer.observe(lazyImage);
+        });
+    } else {
+        // Fallback for older browsers
+        lazyImages.forEach(function (lazyImage) {
+            lazyImage.src = lazyImage.getAttribute("data-src"); // Display the full-resolution image
+            lazyImage.classList.remove("lazy-load");
+        });
+    }
 });
