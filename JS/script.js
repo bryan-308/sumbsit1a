@@ -234,24 +234,26 @@ function updateStatus() {
         });
     }
 
-    // After updating the statuses, update the displayed content
-    updateDisplayedContent();
-}
-
-updateStatus();
-
-for (const day in daysAndSubjects) {
-    const element = document.getElementById(day);
-    if (element) {
-        element.style.whiteSpace = "pre-line";
-        const subject = daysAndSubjects[day];
-        let content = "";
-        announcement[subject].forEach((item) => {
-            content += `<span class="status-circle" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text}`;
-        });
-        element.innerHTML = content;
+    // After updating the statuses, update the displayed content based on the modified statuses
+    for (const day in daysAndSubjects) {
+        const element = document.getElementById(day);
+        if (element) {
+            element.style.whiteSpace = "pre-line";
+            const subject = daysAndSubjects[day];
+            let content = "";
+            announcement[subject].forEach((item) => {
+                content += `<span class="status-circle" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text}`;
+            });
+            element.innerHTML = content;
+        }
     }
 }
+
+// Define the interval (in milliseconds) for updating the status
+const updateInterval = 10000; // 10 seconds
+
+// Set up an interval to periodically update the status
+setInterval(updateStatus, updateInterval);
 
 function getStatusColor(status) {
     switch (status) {
