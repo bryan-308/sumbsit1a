@@ -55,7 +55,7 @@ const announcement = {
             datetime: "2023-11-07T13:00:00"
         },
         { 
-            text: "REFLECTION PAPER (<a href='' target='_blank'>The Bridge Between Culture</a>)\n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing\n", 
+            text: "REFLECTION PAPER (<a href='https://youtu.be/J99j_no7WF0?si=4teLtYTuPDruvYb4' target='_blank'>The Bridge Between Culture</a>)\n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing\n", 
             status: "urgent",
             datetime: "2023-11-07T13:00:00"
         }
