@@ -1115,19 +1115,19 @@ p {
     /* z-index: var(--layer-2); */
 }
 
-.pulseUrgent {
+.important_pulse {
     animation: pulse-animation-urgent 1s linear infinite;
 }
 
-.pulseProgress {
+.progress_pulse {
     animation: pulse-animation-progress 1s linear infinite;
 }
 
-.pulseDone {
+.done_pulse {
     animation: pulse-animation-done 1s linear infinite;
 }
 
-.pulseBasic {
+.normal_pulse {
     animation: pulse-animation-basic 1s linear infinite;
 }
 
