@@ -86,7 +86,7 @@ function randomValues() {
 
 window.addEventListener('load', function () {
     randomValues();
-    setInterval(randomValues, 6000);
+    setInterval(randomValues, 4000);
 });
 
 const subContents = [
@@ -167,7 +167,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     copyButtons.forEach(button => {
         const reminderId = button.getAttribute('data-reminder');
-        const liElement = document.querySelector(`[data-reminder-id="${reminderId}"] li`);
+        const liElement = document.querySelector(`[data-reminder-id="${reminderId}"]`);
+        console.log(liElement);
         const reminderText = liElement.textContent.trim();
 
         if (reminderText) {
@@ -179,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     copyButtons.forEach(button => {
         button.addEventListener('click', () => {
             const reminderId = button.getAttribute('data-reminder');
-            const liElement = document.querySelector(`[data-reminder-id="${reminderId}"] li`);
+            const liElement = document.querySelector(`[data-reminder-id="${reminderId}"]`);
             const reminderText = liElement.textContent.trim();
 
             if (reminderText) {
@@ -201,61 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-const daysAndSubjects = {
-    "m_1_content": "cc101",
-    "m_2_content": "komfil",
-    "t_1_content": "sts",
-    "t_2_content": "pathfit",
-    "t_3_content": "purcom",
-    "w_1_content": "cc100",
-    "w_2_content": "itnet",
-    "w_3_content": "cc101",
-    "th_1_content": "itnet",
-    "th_2_content": "komfil",
-    "f_1_content": "sts",
-    "f_2_content": "mmw",
-    "sat_1_content": "nstp"
-};
-
-for (const day in daysAndSubjects) {
-    const element = document.getElementById(day);
-    if (element) {
-        element.style.whiteSpace = "pre-line";
-        switch (daysAndSubjects[day]) {
-            case "cc101":
-                element.innerHTML = announcement.cc101;
-            break;
-            case "komfil":
-                element.innerHTML = announcement.komfil;
-            break;
-            case "sts":
-                element.innerHTML = announcement.sts;
-            break;
-            case "itnet":
-                element.innerHTML = announcement.itnet;
-            break;
-            case "pathfit":
-                element.innerHTML = announcement.pathfit;
-            break;
-            case "purcom":
-                element.innerHTML = announcement.purcom;
-            break;
-            case "cc100":
-                element.innerHTML = announcement.cc100;
-            break;
-            case "mmw":
-                element.innerHTML = announcement.mmw;
-            break;
-            case "nstp":
-                element.innerHTML = announcement.nstp;
-            break;
-            default:
-                element.innerHTML = "";
-            break;
-        }
-    }
-}
 
 document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll(".lazy-load");
@@ -283,3 +229,163 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+// const announcement = {
+//     cc101: "",
+//     komfil: "",
+//     sts: "",
+//     itnet: "",
+//     pathfit: "",
+//     purcom: "\n• PERFORMANCE (NOV. 7 TUESDAY) \n• REFLECTION \n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing \n",
+//     cc100: "",
+//     mmw: "\n• EXAM (NOV. 10 FRIDAY) \n• POEM (PRINTED)",
+//     nstp: "\n• ASSIGNMENT (OCT. 21)",
+// }
+
+// for (const day in daysAndSubjects) {
+//     const element = document.getElementById(day);
+//     if (element) {
+//         element.style.whiteSpace = "pre-line";
+//         switch (daysAndSubjects[day]) {
+//             case "cc101":
+//                 element.innerHTML = announcement.cc101;
+//             break;
+//             case "komfil":
+//                 element.innerHTML = announcement.komfil;
+//             break;
+//             case "sts":
+//                 element.innerHTML = announcement.sts;
+//             break;
+//             case "itnet":
+//                 element.innerHTML = announcement.itnet;
+//             break;
+//             case "pathfit":
+//                 element.innerHTML = announcement.pathfit;
+//             break;
+//             case "purcom":
+//                 element.innerHTML = announcement.purcom;
+//             break;
+//             case "cc100":
+//                 element.innerHTML = announcement.cc100;
+//             break;
+//             case "mmw":
+//                 element.innerHTML = announcement.mmw;
+//             break;
+//             case "nstp":
+//                 element.innerHTML = announcement.nstp;
+//             break;
+//             default:
+//                 element.innerHTML = "";
+//             break;
+//         }
+//     }
+// }
+
+let updateStatusInterval; // Define the interval variable
+
+function updateStatus() {
+    const now = new Date();
+    for (const subject in announcement) {
+        const subjectAnnouncements = announcement[subject];
+        subjectAnnouncements.forEach((item) => {
+            const timeDiffMilliseconds = new Date(item.datetime) - now;
+            const timeDiffHours = timeDiffMilliseconds / (1000 * 60 * 60);
+            const timeout = Math.floor(0.001 * 60 * 60 * 1000);
+            if (item.status === 'urgent') {
+                item.status = 'urgent';
+                if (timeDiffMilliseconds <= 0) {
+                    item.status = 'in-progress';
+                    console.log("Remaining " + timeDiffHours);
+                    setTimeout(() => {
+                        updateDisplayedContent();
+                        console.log("text: " + item.text + "\n");
+                        console.log("first updatedDisplay");
+                        item.status = 'done';
+                    }, timeout);
+                }
+                if (item.status === 'done') {
+                    if (prevStatus === 'in-progress') {
+                        const remainingTimeout = prevTimeout - timeDiffMilliseconds;
+                        if (remainingTimeout > 0) {
+                            setTimeout(() => {
+                                updateDisplayedContent();
+                                console.log("2nd updatedDisplay");
+                                item.status = 'done';
+                            }, remainingTimeout);
+                        }
+                    }
+                }
+            } else if (item.status === 'basic') {
+                item.status = 'basic';
+            }
+        });
+    }
+    console.log("last updatedDisplay");
+    updateDisplayedContent();
+}
+
+const daysAndSubjects = {
+    "m_1_content": "cc101",
+    "m_2_content": "komfil",
+    "t_1_content": "sts",
+    "t_2_content": "pathfit",
+    "t_3_content": "purcom",
+    "w_1_content": "cc100",
+    "w_2_content": "itnet",
+    "w_3_content": "cc101",
+    "th_1_content": "itnet",
+    "th_2_content": "komfil",
+    "f_1_content": "sts",
+    "f_2_content": "mmw",
+    "sat_1_content": "nstp"
+};
+
+function updateDisplayedContent() {
+    for (const day in daysAndSubjects) {
+        const element = document.getElementById(day);
+        if (element) {
+            element.style.whiteSpace = "pre-line";
+            const subject = daysAndSubjects[day];
+            let content = "";
+            announcement[subject].forEach((item) => {
+                if (item.text !== "") {
+                    content += `<p><span id="status-circle" class="${getStatusClass(item.status)}" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text}</p>`;
+                }
+            });
+            element.innerHTML = content;
+        }
+    }
+}
+
+function getStatusClass(status) {
+    switch (status) {
+        case "urgent":
+            return "pulseUrgent";
+        case "in-progress":
+            return "pulseProgress";
+        case "done":
+            return "pulseDone";
+        case "basic":
+            return "pulseBasic";
+        default:
+            return "pulseUnknown";
+    }
+}
+
+function getStatusColor(status) {
+    switch (status) {
+        case "urgent":
+            return "#D50000";
+        case "in-progress":
+            return "#FF8F00";
+        case "done":
+            return "#00C853";
+        case "basic":
+            return "#252422";
+        default:
+            return "";
+    }
+}
+
+clearInterval(updateStatusInterval); // Clear existing interval (if any) and start a new one
+updateStatusInterval = setInterval(updateStatus, 1000);
