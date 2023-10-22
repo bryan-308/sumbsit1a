@@ -752,12 +752,12 @@ p {
 
 .fade-text {
     position: absolute;
-    bottom: 5%;
-    right: 5%;
+    bottom: 10%;
+    right: 10%;
     display: flex;
     flex-direction: column;
     text-align: center;
-    opacity: .3;
+    opacity: .2;
     z-index: var(--layer-1);
 }
 
@@ -849,14 +849,14 @@ p {
     /* padding: 20px; */
 }
 
-.sub-card-top-right img:nth-child(1) {
+/* .sub-card-top-right img:nth-child(1) {
     display: none;
     height: 100px;
     opacity: .8;
     transition: var(--gen-transition);
-}
+} */
 
-.sub-card-top-right img:nth-child(2) {
+.sub-card-top-right img:nth-child(1) {
     height: 140px;
     opacity: .4;
     /* transition: var(--gen-transition); */
@@ -868,7 +868,7 @@ p {
     z-index: var(--layer-1);
 }
 
-.sub-card-top-right img:nth-child(3) {
+.sub-card-top-right img:nth-child(2) {
     height: 140px;
     opacity: .4;
     top: 15px;
@@ -1014,7 +1014,7 @@ p {
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
-    height: 85%;
+    height: 80%;
     overflow-x: auto;
 }
 
@@ -1100,13 +1100,75 @@ p {
 .module-item a:hover {
     text-decoration: underline;
 }
-
 /* status circle */
-.status-circle {
+#status-circle {
+    --urgent: #f7545499;
+    --in-progress: #ffaa5699;
+    --done: #72ff56bc;
+    --basic: #22222263;
+
     display: inline-block;
     width: 8px;
     height: 8px;
     border-radius: 50%;
+    margin-left: 5px;
+    /* z-index: var(--layer-2); */
+}
+
+.pulseUrgent {
+    animation: pulse-animation-urgent 1s linear infinite;
+}
+
+.pulseProgress {
+    animation: pulse-animation-progress 1s linear infinite;
+}
+
+.pulseDone {
+    animation: pulse-animation-done 1s linear infinite;
+}
+
+.pulseBasic {
+    animation: pulse-animation-basic 1s linear infinite;
+}
+
+@keyframes pulse-animation-urgent {
+    0% {
+        box-shadow: 0 0 0 0px var(--urgent);
+    }
+
+    100% {
+        box-shadow: 0 0 0 5px #00000000;
+    }
+}
+
+@keyframes pulse-animation-progress {
+    0% {
+        box-shadow: 0 0 0 0px var(--in-progress);
+    }
+
+    100% {
+        box-shadow: 0 0 0 5px #00000000;
+    }
+}
+
+@keyframes pulse-animation-done {
+    0% {
+        box-shadow: 0 0 0 0px var(--done);
+    }
+
+    100% {
+        box-shadow: 0 0 0 5px #00000000;
+    }
+}
+
+@keyframes pulse-animation-basic {
+    0% {
+        box-shadow: 0 0 0 0px var(--basic);
+    }
+
+    100% {
+        box-shadow: 0 0 0 5px #00000000;
+    }
 }
 
 .btn-primary {
