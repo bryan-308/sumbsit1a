@@ -291,8 +291,8 @@ function updateStatus() {
             const timeDiffMilliseconds = new Date(item.datetime) - now;
             const timeDiffHours = timeDiffMilliseconds / (1000 * 60 * 60);
             const timeout = Math.floor(0.001 * 60 * 60 * 1000);
-            if (item.status === 'urgent') {
-                item.status = 'urgent';
+            if (item.status === 'important') {
+                item.status = 'important';
                 if (timeDiffMilliseconds <= 0) {
                     item.status = 'in-progress';
                     console.log("Remaining " + timeDiffHours);
@@ -315,8 +315,8 @@ function updateStatus() {
                         }
                     }
                 }
-            } else if (item.status === 'basic') {
-                item.status = 'basic';
+            } else if (item.status === 'normal') {
+                item.status = 'normal';
             }
         });
     }
@@ -359,14 +359,14 @@ function updateDisplayedContent() {
 
 function getStatusClass(status) {
     switch (status) {
-        case "urgent":
-            return "pulseUrgent";
+        case "important":
+            return "urgent_pulse";
         case "in-progress":
-            return "pulseProgress";
+            return "progress_progress";
         case "done":
-            return "pulseDone";
-        case "basic":
-            return "pulseBasic";
+            return "done_pulse";
+        case "normal":
+            return "normal_pulse";
         default:
             return "pulseUnknown";
     }
@@ -374,13 +374,13 @@ function getStatusClass(status) {
 
 function getStatusColor(status) {
     switch (status) {
-        case "urgent":
+        case "important":
             return "#D50000";
         case "in-progress":
             return "#FF8F00";
         case "done":
             return "#00C853";
-        case "basic":
+        case "normal":
             return "#252422";
         default:
             return "";
