@@ -360,9 +360,9 @@ function updateDisplayedContent() {
 function getStatusClass(status) {
     switch (status) {
         case "important":
-            return "urgent_pulse";
+            return "important_pulse";
         case "in-progress":
-            return "progress_progress";
+            return "progress_pulse";
         case "done":
             return "done_pulse";
         case "normal":
