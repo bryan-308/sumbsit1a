@@ -38,7 +38,7 @@ const announcement = {
             datetime: "2023-10-19T08:00:00"
         },
         { 
-            text: "[IN-PROGRESS DOT TEST]", 
+            text: "[IN-PROGRESS DOT TEST 21:30pm - 22:30pm]", 
             status: "important", 
             datetime: "2023-10-23T21:30:00", 
             range: 1
