@@ -291,35 +291,29 @@ function updateStatus() {
             const timeDiffMilliseconds = new Date(item.datetime) - now;
             const timeDiffHours = timeDiffMilliseconds / (1000 * 60 * 60);
             const timeout = Math.floor(item.range * 60 * 60 * 1000);
-            
             if (item.status === 'important') {
                 item.status = 'important';
                 if (timeDiffMilliseconds <= 0) {
                     item.status = 'in-progress';
                     console.log("Remaining " + timeDiffHours);
-                    
                     setTimeout(() => {
                         updateDisplayedContent();
                         console.log("text: " + item.text + "\n");
                         console.log("first updatedDisplay");
-                        
-                        // Set item.range to 0 only after the timeout
-                        setTimeout(() => {
-                            item.range = 0;
-                        }, timeout);
-                        
                         item.status = 'done';
+                        item.range = 0;
                     }, timeout);
                 }
-            } else if (item.status === 'done') {
-                if (item.range > 0) {
-                    const remainingTimeout = timeout - timeDiffMilliseconds;
-                    if (remainingTimeout > 0) {
-                        setTimeout(() => {
-                            updateDisplayedContent();
-                            console.log("2nd updatedDisplay");
-                            item.status = 'done';
-                        }, remainingTimeout);
+                if (item.status === 'done') {
+                    if (prevStatus === 'in-progress') {
+                        const remainingTimeout = prevTimeout - timeDiffMilliseconds;
+                        if (remainingTimeout > 0) {
+                            setTimeout(() => {
+                                updateDisplayedContent();
+                                console.log("2nd updatedDisplay");
+                                item.status = 'done';
+                            }, remainingTimeout);
+                        }
                     }
                 }
             } else if (item.status === 'normal') {
