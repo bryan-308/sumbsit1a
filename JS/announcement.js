@@ -41,7 +41,7 @@ const announcement = {
             text: "[IN-PROGRESS DOT TEST 22:40pm - 22:55pm]", 
             status: "important", 
             datetime: "2023-10-23T22:40:00", 
-            range: .25
+            range: 0
         }
     ],
     pathfit: [
