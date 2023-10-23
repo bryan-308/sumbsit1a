@@ -290,7 +290,7 @@ function updateStatus() {
         subjectAnnouncements.forEach((item) => {
             const timeDiffMilliseconds = new Date(item.datetime) - now;
             const timeDiffHours = timeDiffMilliseconds / (1000 * 60 * 60);
-            const timeout = Math.floor(0.001 * 60 * 60 * 1000);
+            const timeout = Math.floor(item.range * 60 * 60 * 1000);
             if (item.status === 'important') {
                 item.status = 'important';
                 if (timeDiffMilliseconds <= 0) {
