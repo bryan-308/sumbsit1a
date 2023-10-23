@@ -290,7 +290,7 @@ function updateStatus() {
         subjectAnnouncements.forEach((item) => {
             const timeDiffMilliseconds = new Date(item.datetime) - now;
             const timeDiffHours = timeDiffMilliseconds / (1000 * 60 * 60);
-            const timeout = Math.floor(item.range * 60 * 60 * 1000);
+            const timeout = Math.floor(0.0001 * 60 * 60 * 1000);
             if (item.status === 'important') {
                 item.status = 'important';
                 if (timeDiffMilliseconds <= 0) {
@@ -301,7 +301,7 @@ function updateStatus() {
                         console.log("text: " + item.text + "\n");
                         console.log("first updatedDisplay");
                         item.status = 'done';
-                        item.range = 0;
+                        //item.range = 0;
                     }, timeout);
                 }
                 if (item.status === 'done') {
