@@ -301,6 +301,7 @@ function updateStatus() {
                         console.log("text: " + item.text + "\n");
                         console.log("first updatedDisplay");
                         item.status = 'done';
+                        item.range = 0;
                     }, timeout);
                 }
                 if (item.status === 'done') {
