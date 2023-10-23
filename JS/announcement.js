@@ -33,8 +33,9 @@ const announcement = {
     ],
     itnet: [
         { 
-            text: "", 
-            status: "" 
+            text: "MIDTERM EXAM", 
+            status: "important", 
+            datetime: "2023-10-19T08:00:00"
         }
     ],
     pathfit: [
