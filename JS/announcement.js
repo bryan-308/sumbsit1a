@@ -36,11 +36,6 @@ const announcement = {
             text: "MIDTERM EXAM \n", 
             status: "important", 
             datetime: "2023-10-19T08:00:00"
-        },
-        { 
-            text: "[IN-PROGRESS DOT TEST 23:10pm - 23:16pm]", 
-            status: "important", 
-            datetime: "2023-10-23T23:10:00"
         }
     ],
     pathfit: [
