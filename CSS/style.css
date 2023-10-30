@@ -462,22 +462,7 @@ p, ul {
 }
 
 @media only screen and (max-width: 768px) {
-    .home-content .large-logo:nth-child(1),
-    .home-content .large-logo:nth-child(2) {
-        top: 15%;
-        left: -150px;
-        height: 70%;
-    }
 
-    .home-content .large-logo:nth-child(3),
-    .home-content .large-logo:nth-child(4) {
-        top: 15%;
-        right: -150px;
-        height: 70%;
-    }
-}
-
-@media only screen and (max-width: 446px) {
     .home-content .large-logo:nth-child(1),
     .home-content .large-logo:nth-child(2) {
         top: 15%;
