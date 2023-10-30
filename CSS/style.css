@@ -208,7 +208,6 @@ p {
 .fa-users,
 .fa-calendar {
     opacity: 0;
-    /* font-size: 0; */
 }
 
 #menuToggle,
@@ -222,7 +221,6 @@ p {
 
 .switch-container {
     display: flex;
-    /* padding-left: 10px; */
 }
 
 .toggle {
@@ -234,11 +232,6 @@ p {
     margin: 0;
     border: 1px solid;
     border-radius: 10px;
-    /* background-color: #fff; */
-    /* width: 56px;
-    height: 56px; */
-    /* border-radius: 50%; */
-    /* box-shadow: 0 0 50px 20px rgba(0, 0, 0, .1); */
 }
 
 .input {
@@ -443,7 +436,6 @@ p {
     align-items: center;
     height: 100%;
     width: 100%;
-    /* padding: 0 20px; */
     overflow: hidden;
 }
 
@@ -456,8 +448,6 @@ p {
 }
 
 .intro-title p {
-    /* color: var(--secondary-text); */
-    /* font-family: var(--default-font-family); */
     color: var(--color1);
     font-size: var(--font-size-h1);
     font-family: var(--Tektur-font);
@@ -470,24 +460,9 @@ p {
     font-size: var(--font-size-large);
 }
 
-/* 
-.intro-title p span {
-    font-weight: 600;
-    transition: var(--gen-transition);
-}
-
-.intro-title p span:nth-child(1) {
-    color: var(--color6);
-}
-
-.intro-title p span:nth-child(2) {
-    color: var(--color7);
-} */
-
 .intro-subtitle {
     display: flex;
     line-height: .9;
-    /* margin: 20px 0 0 10px; */
     font-size: var(--font-size-medium);
 }
 
@@ -512,7 +487,6 @@ p {
 .intro-subtitle2 {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
     padding: 0 20px;
 }
@@ -553,8 +527,6 @@ p {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: var(--layer-0);
-    /* right: 0;
-    left: 50%; */
 }
 
 .el {
@@ -641,13 +613,6 @@ p {
     margin: 60px 0;
 }
 
-/* .page_c_title {
-    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
-} */
-/* .page_d_title {
-    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
-} */
-
 .page_b_title p,
 .page_c_title p,
 .page_d_title p {
@@ -668,7 +633,6 @@ p {
     justify-content: center;
     align-items: center;
     margin: 30px 0;
-    /* height: auto; */
 }
 
 .student-images {
@@ -718,7 +682,6 @@ p {
 }
 
 .sched-header {
-    /* margin: 10px 0; */
     text-align: center;
 }
 
@@ -828,7 +791,6 @@ p {
 }
 
 .schedule {
-    -wedkit-text-wrap: wrap;
     width: 300px;
 }
 
@@ -847,20 +809,11 @@ p {
     justify-content: center;
     align-items: center;
     width: 30%;
-    /* padding: 20px; */
 }
-
-/* .sub-card-top-right img:nth-child(1) {
-    display: none;
-    height: 100px;
-    opacity: .8;
-    transition: var(--gen-transition);
-} */
 
 .sub-card-top-right img:nth-child(1) {
     height: 140px;
     opacity: .4;
-    /* transition: var(--gen-transition); */
     top: 15px;
     right: 15px;
     position: absolute;
@@ -1110,19 +1063,19 @@ p {
 .module-item a:hover {
     text-decoration: underline;
 }
+
 /* status circle */
 #status-circle {
     --urgent: #f7545499;
     --in-progress: #ffaa5699;
-    --done: #72ff56bc;
-    --basic: #4d4d4d;
+    --done: #72ff5699;
+    --basic: #4d4d4d99;
 
     display: inline-block;
     width: 8px;
     height: 8px;
     border-radius: 50%;
     margin-left: 5px;
-    /* z-index: var(--layer-2); */
 }
 
 .important_pulse {
@@ -1306,11 +1259,6 @@ footer p a:hover {
 }
 
 .vercel-logo img {
-    /* display: block;
-    background-image: url(images/vercelD.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat; */
     height: 20px;
     width: auto;
     margin: 0 5px;
@@ -1325,19 +1273,7 @@ footer p a:hover {
     display: var(--vercelL);
 }
 
-/* .vercel-logo {
-    background-image: var(--vercel);
-    background-size: cover;
-    background-position: center;
-    height: 20px;
-    width: 60px;
-} */
-
-@media only screen and (max-width: 1024px) {
-    /* .intro-title {
-        font-size: 1;
-    } */
-}
+@media only screen and (max-width: 1024px) {}
 
 @media only screen and (max-width: 768px) {
 
@@ -1368,10 +1304,6 @@ footer p a:hover {
     .nav-menu {
         width: 50%;
     }
-
-    /* .fa {
-        margin-right: 5px;
-    } */
 
     .page_b_title p {
         font-size: var(--font-size-h6);
