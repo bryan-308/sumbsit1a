@@ -477,7 +477,7 @@ p, ul {
     }
 }
 
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 446px) {
     .home-content .large-logo:nth-child(1),
     .home-content .large-logo:nth-child(2) {
         top: 15%;
