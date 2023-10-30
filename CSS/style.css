@@ -15,7 +15,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color6);
+    background: var(--color5);
     border-radius: 10px;
 }
 
@@ -57,10 +57,10 @@
     --footer-bg: #f5f5f5;
 
     --color1: #601008;
-    --color5: #761d15;
-    --color2: #F88820;
-    --color3: #F0C820;
-    --color6: #ff7b0099;
+    --color2: #761d15;
+    --color3: #F88820;
+    --color4: #F0C820;
+    --color5: #ff7b0099;
 
     --title1: #F88820;
     --title2: #252422;
@@ -124,10 +124,10 @@
     --radial-grad: radial-gradient(#00000080, transparent 70%);
 
     --color1: #8f180d;
-    --color5: #bc1e10;
-    --color2: #F88820;
-    --color3: #F0C820;
-    --color6: #00ffff;
+    --color2: #bc1e10;
+    --color3: #F88820;
+    --color4: #F0C820;
+    --color5: #00ffff;
 
     --footer-bg: #252422;
     --title1: #ea9a06;
@@ -201,7 +201,7 @@ p, ul {
 }
 
 .nav-link:hover {
-    color: var(--color6);
+    color: var(--color5);
 }
 
 .fa-house,
@@ -282,13 +282,13 @@ p, ul {
         background-image: var(--logo-image);
         background-size: cover;
         background-position: center;
-        height: 40px;
-        width: 40px;
+        height: 35px;
+        width: 35px;
         transition: var(--gen-transition);
     }
 
     .nav-logo img {
-        height: 40px;
+        height: 35px;
         filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
     }
 
@@ -296,7 +296,7 @@ p, ul {
         position: absolute;
         left: 0;
         top: 0;
-        height: 40px;
+        height: 35px;
         animation: rotate 20s linear infinite;
         filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
     }
@@ -360,7 +360,7 @@ p, ul {
     }
     .togglE {
         position: relative;
-        width: 40px;
+        width: 35px;
         cursor: pointer;
         margin: auto;
         display: block;
@@ -370,7 +370,7 @@ p, ul {
         position: absolute;
         left: 0;
         right: 0;
-        height: 4px;
+        height: 3px;
         border-radius: calc(4px / 2);
         background: var(--color1);
         color: inherit;
@@ -415,9 +415,9 @@ p, ul {
 }
 
 .section-name h4 {
-    color: var(--color2);
+    color: var(--color3);
     font-size: var(--font-size-small);
-    font-weight: 700;
+    font-weight: 600;
     font-family: var(--title-font);
     margin: 0;
 }
@@ -506,7 +506,7 @@ p, ul {
 }
 
 .intro-title p:nth-child(2) {
-    color: var(--color2);
+    color: var(--color3);
     font-size: var(--font-size-large);
 }
 
@@ -550,11 +550,11 @@ p, ul {
 }
 
 .intro-subtitle2 p span {
-    color: var(--color3);
+    color: var(--color4);
 }
 
 .intro-subtitle2 p:nth-child(1) {
-    color: var(--color3);
+    color: var(--color4);
 }
 
 .intro-subtitle2 p:nth-child(2) {
@@ -562,11 +562,11 @@ p, ul {
 }
 
 .intro-subtitle2 p:nth-child(3) {
-    color: var(--color2);
+    color: var(--color3);
 }
 
 .intro-subtitle2 p:nth-child(4) {
-    color: var(--color2);
+    color: var(--color3);
 }
 
 .shape-container {
@@ -580,7 +580,7 @@ p, ul {
 }
 
 .el {
-    border: 2px solid var(--color6);
+    border: 2px solid var(--color5);
     min-height: 70px;
     min-width: 70px;
 }
@@ -782,7 +782,7 @@ p, ul {
 .fade-text .fade-bs {
     font-family: var(--title-font);
     font-size: 2rem;
-    color: var(--color2);
+    color: var(--color3);
     font-weight: 600;
     font-style: italic;
     transition: var(--gen-transition);
@@ -791,7 +791,7 @@ p, ul {
 .fade-text .fade-it {
     font-family: var(--title-font);
     font-size: 5rem;
-    color: var(--color5);
+    color: var(--color2);
     font-weight: 800;
     font-style: italic;
     transition: var(--gen-transition);
@@ -800,7 +800,7 @@ p, ul {
 .fade-text .fade-neust {
     font-family: var(--title-font);
     font-size: 1rem;
-    color: var(--color3);
+    color: var(--color4);
     font-weight: 700;
     transition: var(--gen-transition);
 }
@@ -1279,7 +1279,7 @@ footer p a {
 }
 
 footer p a:hover {
-    color: var(--color6);
+    color: var(--color5);
     text-decoration: none;
 }
 
