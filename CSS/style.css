@@ -465,15 +465,15 @@ p, ul {
 
     .home-content .large-logo:nth-child(1),
     .home-content .large-logo:nth-child(2) {
-        top: 15%;
-        left: -150px;
+        top: 10%;
+        left: -120px;
         height: 40%;
     }
 
     .home-content .large-logo:nth-child(3),
     .home-content .large-logo:nth-child(4) {
-        top: 45%;
-        right: -150px;
+        top: 55%;
+        right: -120px;
         height: 40%;
     }
 }
