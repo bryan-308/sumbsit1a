@@ -482,14 +482,14 @@ p, ul {
     .home-content .large-logo:nth-child(2) {
         top: 15%;
         left: -150px;
-        height: 50%;
+        height: 40%;
     }
 
     .home-content .large-logo:nth-child(3),
     .home-content .large-logo:nth-child(4) {
         top: 45%;
         right: -150px;
-        height: 50%;
+        height: 40%;
     }
 }
 
