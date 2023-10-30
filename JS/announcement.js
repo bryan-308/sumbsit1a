@@ -86,12 +86,12 @@ const announcement = {
     ],
     nstp: [
         {
-            text: "PRINTED ASSIGNMENT ABOUT BLIND SOLDIERS (OCT. 28) \n", 
+            text: "PRINTED ASSIGNMENT ABOUT BLIND SOLDIERS (NOV. 4) \n", 
             status: "important", 
-            datetime: "2023-10-28T08:00:00"
+            datetime: "2023-11-04T08:00:00"
         },
         {
-            text: "ASSIGNMENT (YUNG LAST WEEK) \n", 
+            text: "ASSIGNMENT (YUNG YELLOW PAD) \n", 
             status: "important", 
             datetime: "2023-10-28T08:00:00"
         }
