@@ -112,7 +112,8 @@
     --cardbg: url(/images/waves.png);
 
     --text-color: #fdfdfded;
-    --card-bottom-bg: #f5f5f5;
+    --card-bottom-bg: #1a1a1a;
+    --card-bottom-text: #f5f5f5;
     --active-text: #ffffff;
     --card-active-text: #242522;
     --bold-text: #fff;
@@ -964,7 +965,7 @@ p {
     padding: 15px;
     border-top-right-radius: 9px;
     border-top-left-radius: 9px;
-    background: #f5f5f5;
+    background: var(--card-bottom-bg);
     z-index: var(--layer-4);
 }
 
@@ -997,15 +998,24 @@ p {
 .remove {
     border: none;
     background: none;
+}
+
+.remove i {
+    border: none;
+    background: none;
     font-size: 30px;
     line-height: .5;
     transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) .4s;
     vertical-align: middle;
 }
 
-.remove:hover {
+.remove i:hover {
     color: red;
     transform: rotate(-90deg);
+}
+
+.remove i {
+    color: var(--card-bottom-text);
 }
 
 .content-body {
@@ -1014,14 +1024,14 @@ p {
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
-    height: 80%;
+    height: 75%;
     overflow-x: auto;
 }
 
 .module-body,
 .topic-body,
 .content-header p {
-    color: var(--card-active-text);
+    color: var(--card-bottom-text);
 }
 
 .content-header p:nth-child(1) {
@@ -1105,7 +1115,7 @@ p {
     --urgent: #f7545499;
     --in-progress: #ffaa5699;
     --done: #72ff56bc;
-    --basic: #22222263;
+    --basic: #4d4d4d;
 
     display: inline-block;
     width: 8px;
@@ -1181,6 +1191,20 @@ p {
     padding: 0.5rem;
 }
 
+.dropdown-menu.show {
+    transform: translate3d(-45px, 25px, 0px);
+    display: block;
+    overflow-y: auto;
+    max-height: 190px;
+    min-width: 170px;
+    background-color: var(--card-bottom-bg);
+    border: 1px solid #7d7d7d82;
+}
+
+.module-list {
+    margin-bottom: 0;
+}
+
 .btnn {
     font-size: var(--font-size-xs);
     color: var(--card-bottom-text);
@@ -1225,7 +1249,7 @@ p {
 
 .help-button a,
 .copy-text-button {
-    color: var(--card-active-text);
+    color: var(--card-bottom-text);
 }
 
 .help-button a:hover {

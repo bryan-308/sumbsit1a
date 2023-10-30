@@ -382,7 +382,7 @@ function getStatusColor(status) {
         case "done":
             return "#00C853";
         case "normal":
-            return "#252422";
+            return "#4d4d4d";
         default:
             return "";
     }
