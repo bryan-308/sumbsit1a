@@ -1187,7 +1187,7 @@ p, ul {
 .btn-primary {
     padding: 0 0.5rem;
     border-radius: 5px;
-    border: 1px solid var(--active-text);
+    /* border: 1px solid var(--active-text); */
 }
 
 .dropdown-menu {
@@ -1201,7 +1201,7 @@ p, ul {
     max-height: 190px;
     min-width: 170px;
     background-color: var(--card-bottom-bg);
-    border: 1px solid #7d7d7d82;
+    /* border: 1px solid #7d7d7d82; */
 }
 
 .module-list {
