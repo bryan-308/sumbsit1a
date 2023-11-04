@@ -1,6 +1,10 @@
 const announcement = {
     cc101: [
         { 
+            text: "\n", 
+            status: "" 
+        },
+        { 
             text: "NEW NOTEBOOK AND INDEX FOR FINALS \n", 
             status: "normal"
         },
@@ -22,6 +26,10 @@ const announcement = {
     ],
     sts: [
         { 
+            text: "\n", 
+            status: "" 
+        },
+        { 
             text: "GROUP TASK (NOV. 17 FRIDAY)", 
             status: "important", 
             datetime: "2023-11-17T07:30:00"
@@ -33,12 +41,25 @@ const announcement = {
     ],
     itnet: [
         { 
+            text: "\n", 
+            status: "" 
+        },
+        { 
             text: "MIDTERM EXAM \n", 
             status: "important", 
             datetime: "2023-10-19T08:00:00"
+        },
+        { 
+            text: "CONTINUATION OF UTP CABLE CRIMPING\n", 
+            status: "important", 
+            datetime: "2023-11-09T08:00:00"
         }
     ],
     pathfit: [
+        { 
+            text: "\n", 
+            status: "" 
+        },
         { 
             text: "", 
             status: "", 
@@ -50,6 +71,10 @@ const announcement = {
         }
     ],
     purcom: [
+        { 
+            text: "\n", 
+            status: "" 
+        },
         { 
             text: "PERFORMANCE SIGN LANGUAGE (NOV. 7 TUESDAY)\n", 
             status: "important",
@@ -63,12 +88,20 @@ const announcement = {
     ],
     cc100: [
         { 
+            text: "\n", 
+            status: "" 
+        },
+        { 
             text: "VIDEO DOCUMENTATION (NOV. 8)", 
             status: "important", 
             datetime: "2023-11-08T08:00:00"
         }
     ],
     mmw: [
+        { 
+            text: "\n", 
+            status: "" 
+        },
         { 
             text: "EXAM (NOV. 10) \n", 
             status: "important", 
@@ -85,6 +118,10 @@ const announcement = {
         }
     ],
     nstp: [
+        { 
+            text: "\n", 
+            status: "" 
+        },
         {
             text: "PRINTED ASSIGNMENT ABOUT BLIND SOLDIERS (NOV. 4) \n", 
             status: "important", 
