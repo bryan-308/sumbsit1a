@@ -148,7 +148,7 @@ for (let i = 0; i < subContentButtons.length; i++) {
             subContents[activeIndex].classList.add("closing");          // Add a class to trigger the closing transition 
             setTimeout(() => {
                 subContents[activeIndex].classList.remove("closing");   // Remove the closing class after a delay 
-            }, 300);                                                    // Adjust the timeout value to match your CSS transition duration 
+            }, 500);                                                    // Adjust the timeout value to match your CSS transition duration 
         } subContents[i].classList.toggle("active");
         activeIndex = i;
 
@@ -157,7 +157,7 @@ for (let i = 0; i < subContentButtons.length; i++) {
         setTimeout(() => {
             subContents[i].classList.remove("active");
             subContents[i].classList.remove("closing");                 // Remove the closing class after a delay 
-        }, 300);                                                        // Adjust the timeout value to match your CSS transition duration 
+        }, 500);                                                        // Adjust the timeout value to match your CSS transition duration 
         activeIndex = -1;
     });
 }
@@ -369,7 +369,7 @@ function getStatusClass(status) {
         case "normal":
             return "normal_pulse";
         default:
-            return "pulseUnknown";
+            return "";
     }
 }
 
