@@ -15,13 +15,14 @@ const announcement = {
     ],
     komfil: [
         { 
-            text: "RECITATION", 
-            status: "important", 
-            datetime: "2023-10-19T13:00:00"
+            text: "\n", 
+            status: "", 
+            datetime: ""
         },
         { 
-            text: "", 
-            status: "" 
+            text: "PAGSUSULIT SA KABANATA 3 MODYUL 1", 
+            status: "important", 
+            datetime: "2023-11-09T13:00:00"
         }
     ],
     sts: [
