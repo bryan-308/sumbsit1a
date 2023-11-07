@@ -62,9 +62,9 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "", 
-            status: "", 
-            datetime: ""
+            text: "PRACTICAL TEST ABOUT LOCOMOTOR AND NON LOCOMOTOR", 
+            status: "important", 
+            datetime: "2023-11-14T10:00:00"
         },
         { 
             text: "", 
