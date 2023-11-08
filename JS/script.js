@@ -358,7 +358,7 @@ function updateDisplayedContent() {
                     const textDecoration = item.status === "done" ? "line-through" : "none"; // Check if status is "done"
 
                     content += `<p><span id="status-circle" class="${statusClass}" style="background-color: ${getStatusColor(item.status)};"></span> 
-                                <span style="text-decoration: ${textDecoration}; color: var(--neutral-500);">${item.text} ${deadlineText}</span></p>`;
+                                <span style="text-decoration: ${textDecoration}; color: var(--neutral-100);"> ${item.text}</span> <span style="text-decoration: ${textDecoration}; color: var(--neutral-500);"> ${deadlineText}</span></p>`;
                 }
             });
             element.innerHTML = content;
