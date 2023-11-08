@@ -162,28 +162,16 @@ for (let i = 0; i < subContentButtons.length; i++) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function handleCopyButtons() {
     const copyButtons = document.querySelectorAll('.copy-text-button');
 
     copyButtons.forEach(button => {
         const reminderId = button.getAttribute('data-reminder');
         const liElement = document.querySelector(`[data-reminder-id="${reminderId}"]`);
-        console.log(liElement);
         const reminderText = liElement.textContent.trim();
 
         if (reminderText) {
-        } else {
-            button.classList.add('hidden');
-        }
-    });
-
-    copyButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const reminderId = button.getAttribute('data-reminder');
-            const liElement = document.querySelector(`[data-reminder-id="${reminderId}"]`);
-            const reminderText = liElement.textContent.trim();
-
-            if (reminderText) {
+            button.addEventListener('click', () => {
                 const textArea = document.createElement('textarea');
                 textArea.value = reminderText;
 
@@ -198,9 +186,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     button.innerHTML = '<i class="fa-solid fa-clipboard"></i> Copy Text';
                 }, 1500);
-            }
-        });
+            });
+        } else {
+            button.classList.add('hidden');
+        }
     });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Call the function to handle copy buttons
+    handleCopyButtons();
+
+    // Synchronize the interval with updateDisplayedContent
+    const updateInterval = 1000; // 1 second
+    setInterval(() => {
+        handleCopyButtons();
+    }, updateInterval);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
