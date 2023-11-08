@@ -401,4 +401,4 @@ function getStatusColor(status) {
 }
 
 clearInterval(updateStatusInterval); // Clear existing interval (if any) and start a new one
-updateStatusInterval = setInterval(updateStatus, 5000);
+updateStatusInterval = setInterval(updateStatus, 1000);
