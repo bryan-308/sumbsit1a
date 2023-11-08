@@ -1286,7 +1286,7 @@ p, ul {
     max-height: 190px;
     min-width: 170px;
     background-color: var(--card-bottom-bg);
-    /* border: 1px solid #7d7d7d82; */
+    border: 1px solid var(--neutral-500);
 }
 
 .module-list {
