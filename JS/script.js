@@ -350,12 +350,21 @@ function updateDisplayedContent() {
             let content = "";
             announcement[subject].forEach((item) => {
                 if (item.text !== "") {
-                    content += `<p><span id="status-circle" class="${getStatusClass(item.status)}" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text}</p>`;
+                    const deadlineText = item.datetime
+                        ? `<i class="far fa-clock" style="color: #e5e5e5;"></i> ${formatReadableDate(item.datetime)}`
+                        : "";
+
+                    content += `<p><span id="status-circle" class="${getStatusClass(item.status)}" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text} ${deadlineText}</p>`;
                 }
             });
             element.innerHTML = content;
         }
     }
+}
+
+function formatReadableDate(dateTimeString) {
+    const options = { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+    return new Date(dateTimeString).toLocaleString('en-US', options);
 }
 
 function formatReadableDate(dateTimeString) {
