@@ -96,6 +96,11 @@ const announcement = {
             text: "VIDEO DOCUMENTATION (NOV. 8)", 
             status: "important", 
             datetime: "2023-11-08T08:00:00"
+        },
+        { 
+            text: "ASSIGNMENT No1-F (FRI, NOV. 10)", 
+            status: "important", 
+            datetime: "2023-11-10T12:00:00"
         }
     ],
     mmw: [
