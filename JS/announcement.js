@@ -1,3 +1,7 @@
+const lastUp = document.querySelector(".lastUp");
+    
+lastUp.innerHTML = "<i class="fa-duotone fa-clock-rotate-left"></i> Wed, Nov 8, 20:46";
+
 const announcement = {
     cc101: [
         { 
@@ -131,7 +135,3 @@ const announcement = {
     ]
 };
 // To add newline, type "\n"
-
-const lastUp = document.querySelector(".lastUp");
-
-lastUp.textContent = "Last Update: Wed, Nov 8, 20:46";
