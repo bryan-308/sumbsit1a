@@ -1285,7 +1285,7 @@ p, ul {
     overflow-y: auto;
     max-height: 190px;
     min-width: 170px;
-    background-color: var(--card-bottom-bg);
+    background-color: var(--dropdown-menu);
     border: 1px solid var(--neutral-500);
 }
 
