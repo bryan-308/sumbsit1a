@@ -46,12 +46,12 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "MIDTERM EXAM \n", 
+            text: "MIDTERM EXAM", 
             status: "important", 
             datetime: "2023-10-19T08:00:00"
         },
         { 
-            text: "CONTINUATION OF UTP CABLE CRIMPING\n", 
+            text: "CONTINUATION OF UTP CABLE CRIMPING", 
             status: "important", 
             datetime: "2023-11-09T08:00:00"
         }
@@ -75,16 +75,6 @@ const announcement = {
         { 
             text: "\n", 
             status: "" 
-        },
-        { 
-            text: "PERFORMANCE SIGN LANGUAGE\n", 
-            status: "important",
-            datetime: "2023-11-07T13:00:00"
-        },
-        { 
-            text: "REFLECTION PAPER (<a href='https://youtu.be/J99j_no7WF0?si=4teLtYTuPDruvYb4' target='_blank'>The Bridge Between Culture</a>)\n - Paper Size: short bond paper \n - Font size: 12 \n - Font style: Times New Roman/ Tahoma \n - 1.5 line spacing\n", 
-            status: "important",
-            datetime: "2023-11-07T13:00:00"
         }
     ],
     cc100: [
@@ -109,17 +99,17 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "EXAM\n", 
+            text: "EXAM", 
             status: "important", 
             datetime: "2023-11-10T13:00:00"
         },
         { 
-            text: "POEM (PRINTED) \n", 
+            text: "POEM (PRINTED)", 
             status: "important", 
             datetime: "2023-11-10T13:00:00"
         },
         { 
-            text: "NOTEBOOK \n", 
+            text: "NOTEBOOK", 
             status: "normal" 
         }
     ],
@@ -129,12 +119,12 @@ const announcement = {
             status: "" 
         },
         {
-            text: "PRINTED ASSIGNMENT ABOUT BLIND SOLDIERS\n", 
+            text: "PRINTED ASSIGNMENT ABOUT BLIND SOLDIERS", 
             status: "important", 
             datetime: "2023-11-04T08:00:00"
         },
         {
-            text: "ASSIGNMENT (YUNG YELLOW PAD) \n", 
+            text: "ASSIGNMENT (YUNG YELLOW PAD)", 
             status: "important", 
             datetime: "2023-10-28T08:00:00"
         }
