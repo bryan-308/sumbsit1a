@@ -351,7 +351,7 @@ function updateDisplayedContent() {
             announcement[subject].forEach((item) => {
                 if (item.text !== "") {
                     const deadlineText = item.datetime
-                        ? `<span style="color: var(--neutral-200); font-size: 10px;"><i class="far fa-clock"></i> ${formatReadableDate(item.datetime)}</span`
+                        ? `<span style="color: var(--neutral-100); font-size: 10px;"><i class="far fa-clock"></i> ${formatReadableDate(item.datetime)}</span>`
                         : "";
 
                     content += `<p><span id="status-circle" class="${getStatusClass(item.status)}" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text} ${deadlineText}</p>`;
