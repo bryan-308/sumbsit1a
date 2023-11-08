@@ -39,6 +39,7 @@
 
     --card-text: #fefefe;
     --card-bottom-bg: #fefefe;
+    --dropdown-menu: #fefefe;
     --card-active-text: #252422;
 
     --card-top-text-50: #fafafa;
@@ -132,7 +133,8 @@
     --cardbg: url(/images/waves.png);
 
     --text-color: #fdfdfded;
-    --card-bottom-bg: #1a1a1a;
+    --card-bottom-bg: #1a1a1a;   
+    --dropdown-menu: #252930;
     --card-active-text: #242522;
     --cardasd: #333333;
 
