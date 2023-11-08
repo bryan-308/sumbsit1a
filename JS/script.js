@@ -350,12 +350,7 @@ function updateDisplayedContent() {
             let content = "";
             announcement[subject].forEach((item) => {
                 if (item.text !== "") {
-                    const deadlineText = item.datetime ? formatReadableDate(item.datetime) : "";
-                    const iconAndText = item.datetime
-                        ? `<i class="far fa-clock" style="color: #e5e5e5;"></i> ${deadlineText}`
-                        : item.text;
-
-                    content += `<p><span id="status-circle" class="${getStatusClass(item.status)}" style="background-color: ${getStatusColor(item.status)};"></span> ${iconAndText}</p>`;
+                    content += `<p><span id="status-circle" class="${getStatusClass(item.status)}" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text}</p>`;
                 }
             });
             element.innerHTML = content;
