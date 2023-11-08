@@ -31,7 +31,7 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "GROUP TASK (NOV. 17 FRIDAY)", 
+            text: "GROUP TASK", 
             status: "important", 
             datetime: "2023-11-17T07:30:00"
         },
@@ -77,7 +77,7 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "PERFORMANCE SIGN LANGUAGE (NOV. 7 TUESDAY)\n", 
+            text: "PERFORMANCE SIGN LANGUAGE\n", 
             status: "important",
             datetime: "2023-11-07T13:00:00"
         },
@@ -93,12 +93,12 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "VIDEO DOCUMENTATION (NOV. 8)", 
+            text: "VIDEO DOCUMENTATION", 
             status: "important", 
             datetime: "2023-11-08T08:00:00"
         },
         { 
-            text: "ASSIGNMENT No1-F (FRI, NOV. 10)", 
+            text: "ASSIGNMENT No1-F", 
             status: "important", 
             datetime: "2023-11-10T12:00:00"
         }
@@ -109,7 +109,7 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "EXAM (NOV. 10) \n", 
+            text: "EXAM\n", 
             status: "important", 
             datetime: "2023-11-10T13:00:00"
         },
@@ -129,7 +129,7 @@ const announcement = {
             status: "" 
         },
         {
-            text: "PRINTED ASSIGNMENT ABOUT BLIND SOLDIERS (NOV. 4) \n", 
+            text: "PRINTED ASSIGNMENT ABOUT BLIND SOLDIERS\n", 
             status: "important", 
             datetime: "2023-11-04T08:00:00"
         },
