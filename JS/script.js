@@ -351,7 +351,7 @@ function updateDisplayedContent() {
             announcement[subject].forEach((item) => {
                 if (item.text !== "") {
                     const deadlineText = item.datetime
-                        ? `<i class="far fa-clock"></i> ${formatReadableDate(item.datetime)}`
+                        ? `Until (${formatReadableDate(item.datetime)})`
                         : "";
 
                     const statusClass = getStatusClass(item.status);
