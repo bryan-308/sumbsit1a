@@ -354,7 +354,11 @@ function updateDisplayedContent() {
                         ? `<i class="far fa-clock"></i> ${formatReadableDate(item.datetime)}`
                         : "";
 
-                    content += `<p><span id="status-circle" class="${getStatusClass(item.status)}" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text} <span style="color: var(--neutral-500); font-size: 10px;">${deadlineText}</span></p>`;
+                    const statusClass = getStatusClass(item.status);
+                    const textDecoration = item.status === "done" ? "line-through" : "none"; // Check if status is "done"
+
+                    content += `<p><span id="status-circle" class="${statusClass}" style="background-color: ${getStatusColor(item.status)};"></span> 
+                                <span style="text-decoration: ${textDecoration}; color: var(--neutral-500);">${item.text} ${deadlineText}</span></p>`;
                 }
             });
             element.innerHTML = content;
