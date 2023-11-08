@@ -99,7 +99,7 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "EXAM", 
+            text: "PART II EXAMINATION", 
             status: "important", 
             datetime: "2023-11-10T13:00:00"
         },
