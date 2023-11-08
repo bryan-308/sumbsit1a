@@ -1,15 +1,11 @@
 const lastUp = document.querySelector(".lastUp");
-lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Wed, Nov 8, 20:54';
+lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Wed, Nov 8, 00:31';
 
 const announcement = {
     cc101: [
         { 
             text: "\n", 
             status: "" 
-        },
-        { 
-            text: "NEW NOTEBOOK AND INDEX FOR FINALS \n", 
-            status: "normal"
         },
         { 
             text: "", 
