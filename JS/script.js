@@ -371,11 +371,6 @@ function formatReadableDate(dateTimeString) {
     return new Date(dateTimeString).toLocaleString('en-US', options);
 }
 
-function formatReadableDate(dateTimeString) {
-    const options = { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' };
-    return new Date(dateTimeString).toLocaleString('en-US', options);
-}
-
 function getStatusClass(status) {
     switch (status) {
         case "important":
