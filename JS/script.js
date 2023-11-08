@@ -351,12 +351,12 @@ function updateDisplayedContent() {
             announcement[subject].forEach((item) => {
                 if (item.text !== "") {
                     const deadlineText = item.datetime
-                        ? `Until (${formatReadableDate(item.datetime)})`
+                        ? `Until ${formatReadableDate(item.datetime)}`
                         : "";
 
                     const statusClass = getStatusClass(item.status);
                     const textDecoration = item.status === "done" ? "line-through" : "none"; // Check if status is "done"
-
+                    
                     content += `<p><span id="status-circle" class="${statusClass}" style="background-color: ${getStatusColor(item.status)};"></span><span style="text-decoration: ${textDecoration};"> ${item.text}</span><span style="text-decoration: ${textDecoration}; color: var(--neutral-500); font-size: 10px;"> ${deadlineText}</span></p>`;
                 }
             });
