@@ -354,7 +354,7 @@ function updateDisplayedContent() {
                         ? `<i class="far fa-clock"></i> ${formatReadableDate(item.datetime)}`
                         : "";
 
-                    content += `<p><span id="status-circle" class="${getStatusClass(item.status)}" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text} <span style="color: var(--neutral-100); font-size: 10px;">${deadlineText}</span></p>`;
+                    content += `<p><span id="status-circle" class="${getStatusClass(item.status)}" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text} <span style="color: var(--neutral-500); font-size: 10px;">${deadlineText}</span></p>`;
                 }
             });
             element.innerHTML = content;
