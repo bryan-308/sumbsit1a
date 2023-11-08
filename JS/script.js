@@ -351,10 +351,10 @@ function updateDisplayedContent() {
             announcement[subject].forEach((item) => {
                 if (item.text !== "") {
                     const deadlineText = item.datetime
-                        ? `<span style="color: var(--neutral-100); font-size: 10px;"><i class="far fa-clock"></i> ${formatReadableDate(item.datetime)}</span>`
+                        ? `<i class="far fa-clock"></i> ${formatReadableDate(item.datetime)}`
                         : "";
 
-                    content += `<p><span id="status-circle" class="${getStatusClass(item.status)}" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text} ${deadlineText}</p>`;
+                    content += `<p><span id="status-circle" class="${getStatusClass(item.status)}" style="background-color: ${getStatusColor(item.status)};"></span> ${item.text} <span style="color: var(--neutral-100); font-size: 10px;">${deadlineText}</span></p>`;
                 }
             });
             element.innerHTML = content;
