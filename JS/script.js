@@ -361,3 +361,44 @@ function getStatusColor(status) {
 
 clearInterval(updateStatusInterval); // Clear existing interval (if any) and start a new one
 updateStatusInterval = setInterval(updateStatus, 1000);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const copyButtons = document.querySelectorAll('.copy-text-button');
+
+    copyButtons.forEach(button => {
+        const reminderId = button.getAttribute('data-reminder');
+        const liElement = document.querySelector(`[data-reminder-id="${reminderId}"]`);
+        console.log(liElement);
+        const reminderText = liElement.textContent.trim();
+
+        if (reminderText) {
+        } else {
+            button.classList.add('hidden');
+        }
+    });
+
+    copyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const reminderId = button.getAttribute('data-reminder');
+            const liElement = document.querySelector(`[data-reminder-id="${reminderId}"]`);
+            const reminderText = liElement.textContent.trim();
+
+            if (reminderText) {
+                const textArea = document.createElement('textarea');
+                textArea.value = reminderText;
+
+                document.body.appendChild(textArea);
+
+                textArea.select();
+                document.execCommand('copy');
+
+                document.body.removeChild(textArea);
+
+                button.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fa-solid fa-clipboard"></i> Copy Text';
+                }, 1500);
+            }
+        });
+    });
+});
