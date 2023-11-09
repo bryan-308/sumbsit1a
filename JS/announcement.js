@@ -22,6 +22,11 @@ const announcement = {
             text: "PAGSUSULIT SA KABANATA 3 MODYUL 1", 
             status: "important", 
             datetime: "2023-11-09T13:00:00"
+        },
+        { 
+            text: "SASAGUTAN KABANATA 1-4", 
+            status: "important", 
+            datetime: "2023-11-30T13:00:00"
         }
     ],
     sts: [
