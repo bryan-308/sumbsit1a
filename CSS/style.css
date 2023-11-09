@@ -1310,7 +1310,8 @@ p, ul {
 }
 
 .copy-text-button {
-    color: var(--card-active-text);
+    color: var(--card-bot-text-200);
+    background-color: var(--dropdown-menu);
     border: 1px solid lightgrey;
     width: fit-content;
     border-radius: 5px;
