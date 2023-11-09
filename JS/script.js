@@ -162,13 +162,13 @@ for (let i = 0; i < subContentButtons.length; i++) {
     });
 }
 
-function handleCopyButtons() {
+// Function to initialize copy buttons and handle their click events
+function initializeCopyButtons() {
     const copyButtons = document.querySelectorAll('.copy-text-button');
 
     copyButtons.forEach(button => {
         const reminderId = button.getAttribute('data-reminder');
-        const liElement = document.querySelector(`[data-reminder-id="${reminderId}"]`);
-        const reminderText = liElement.textContent.trim();
+        const reminderText = getReminderText(reminderId);
 
         if (reminderText) {
             button.addEventListener('click', () => {
@@ -193,16 +193,27 @@ function handleCopyButtons() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Call the function to handle copy buttons
-    handleCopyButtons();
+// Function to retrieve reminder text based on reminder ID
+function getReminderText(reminderId) {
+    for (const subject in announcement) {
+        const subjectAnnouncements = announcement[subject];
+        for (const item of subjectAnnouncements) {
+            if (item.text && item.text.trim() !== "") {
+                // You can customize the logic to match the reminder ID with item properties if needed
+                if (item.text === reminderId) {
+                    return item.text;
+                }
+            }
+        }
+    }
+    return null; // Return null if reminder text is not found
+}
 
-    // Synchronize the interval with updateDisplayedContent
-    const updateInterval = 1000; // 1 second
-    setInterval(() => {
-        handleCopyButtons();
-    }, updateInterval);
-});
+// Call the function on page load
+document.addEventListener('DOMContentLoaded', initializeCopyButtons);
+
+// Synchronize the interval with the updateStatus function
+updateStatusInterval = setInterval(updateStatus, 1000);
 
 document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll(".lazy-load");
