@@ -1,5 +1,5 @@
 const lastUp = document.querySelector(".lastUp");
-lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Wed, Nov 8, 8:12 PM';
+lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Wed, Nov 10, 8:12 PM';
 
 const announcement = {
     cc101: [
@@ -110,6 +110,22 @@ const announcement = {
             text: "MMW SONG (Print 5 copies w/o design)", 
             status: "important", 
             datetime: "2023-12-01T13:00:00"
+        },
+        { 
+            text: "\n", 
+            status: "" 
+        },
+        { 
+            text: "\n", 
+            status: "" 
+        },
+        { 
+            text: "\n", 
+            status: "" 
+        },
+        { 
+            text: "For song-related concerns, reach out to our P.R.O. for assistance.", 
+            status: "" 
         }
     ],
     nstp: [
