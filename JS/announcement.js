@@ -103,18 +103,13 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "PART II EXAMINATION", 
-            status: "important", 
-            datetime: "2023-11-10T13:00:00"
-        },
-        { 
-            text: "POEM (PRINTED)", 
-            status: "important", 
-            datetime: "2023-11-10T13:00:00"
-        },
-        { 
-            text: "NOTEBOOK", 
+            text: "Start memorizing your poem/song", 
             status: "normal" 
+        },
+        { 
+            text: "MMW SONG (Print 5 copies w/o design)", 
+            status: "important", 
+            datetime: "2023-12-01T13:00:00"
         }
     ],
     nstp: [
