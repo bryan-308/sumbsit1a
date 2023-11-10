@@ -300,25 +300,7 @@ const daysAndSubjects = {
     "sat_1_content": "nstp"
 };
 
-function updateStatusCircle() {
-    for (const day in daysAndSubjects) {
-        const element = document.getElementById(day);
-        if (element) {
-            element.style.whiteSpace = "pre-line";
-            const subject = daysAndSubjects[day];
-            let content = "";
-            announcement[subject].forEach((item) => {
-                if (item.text !== "") {
-                    const statusClass = getStatusClass(item.status);
-                    content += `<p><span id="status-circle" class="${statusClass}" style="background-color: ${getStatusColor(item.status)};"></span></p>`;
-                }
-            });
-            element.innerHTML = content; // Clear existing content before setting the new content
-        }
-    }
-}
-
-function updateItemText() {
+function updateDisplayedContent() {
     for (const day in daysAndSubjects) {
         const element = document.getElementById(day);
         if (element) {
@@ -331,12 +313,13 @@ function updateItemText() {
                         ? `Until ${formatReadableDate(item.datetime)}`
                         : "";
 
-                    const textDecoration = item.status === "done" ? "line-through" : "none";
+                    const statusClass = getStatusClass(item.status);
+                    const textDecoration = item.status === "done" ? "line-through" : "none"; // Check if status is "done"
                     
-                    content += `<p><span style="text-decoration: ${textDecoration};"> ${item.text}</span><span style="text-decoration: ${textDecoration}; color: var(--neutral-500); font-size: 10px;"> ${deadlineText}</span></p>`;
+                    content += `<p><span id="status-circle" class="${statusClass}" style="background-color: ${getStatusColor(item.status)};"></span><span style="text-decoration: ${textDecoration};"> ${item.text}</span><span style="text-decoration: ${textDecoration}; color: var(--neutral-500); font-size: 10px;"> ${deadlineText}</span></p>`;
                 }
             });
-            element.innerHTML = content; // Clear existing content before setting the new content
+            element.innerHTML = content;
         }
     }
 }
@@ -376,13 +359,8 @@ function getStatusColor(status) {
     }
 }
 
-// Clear existing interval for status circle and start a new one
-clearInterval(updateStatusCircleInterval);
-updateStatusCircleInterval = setInterval(updateStatusCircle, 1000);
-
-// Clear existing interval for item text and start a new one
-clearInterval(updateItemTextInterval);
-updateItemTextInterval = setInterval(updateItemText, 10000);
+clearInterval(updateStatusInterval); // Clear existing interval (if any) and start a new one
+updateStatusInterval = setInterval(updateStatus, 1000);
 
 document.addEventListener('DOMContentLoaded', () => {
     const copyButtons = document.querySelectorAll('.copy-text-button');
