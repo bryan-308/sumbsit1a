@@ -116,10 +116,6 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "\n", 
-            status: "" 
-        },
-        { 
             text: "For song-related concerns, reach out to our P.R.O. for assistance.", 
             status: "" 
         }
