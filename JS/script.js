@@ -300,7 +300,25 @@ const daysAndSubjects = {
     "sat_1_content": "nstp"
 };
 
-function updateDisplayedContent() {
+function updateStatusCircle() {
+    for (const day in daysAndSubjects) {
+        const element = document.getElementById(day);
+        if (element) {
+            element.style.whiteSpace = "pre-line";
+            const subject = daysAndSubjects[day];
+            let content = "";
+            announcement[subject].forEach((item) => {
+                if (item.text !== "") {
+                    const statusClass = getStatusClass(item.status);
+                    content += `<p><span id="status-circle" class="${statusClass}" style="background-color: ${getStatusColor(item.status)};"></span></p>`;
+                }
+            });
+            element.innerHTML = content; // Clear existing content before setting the new content
+        }
+    }
+}
+
+function updateItemText() {
     for (const day in daysAndSubjects) {
         const element = document.getElementById(day);
         if (element) {
@@ -313,13 +331,12 @@ function updateDisplayedContent() {
                         ? `Until ${formatReadableDate(item.datetime)}`
                         : "";
 
-                    const statusClass = getStatusClass(item.status);
-                    const textDecoration = item.status === "done" ? "line-through" : "none"; // Check if status is "done"
+                    const textDecoration = item.status === "done" ? "line-through" : "none";
                     
-                    content += `<p><span id="status-circle" class="${statusClass}" style="background-color: ${getStatusColor(item.status)};"></span><span style="text-decoration: ${textDecoration};"> ${item.text}</span><span style="text-decoration: ${textDecoration}; color: var(--neutral-500); font-size: 10px;"> ${deadlineText}</span></p>`;
+                    content += `<p><span style="text-decoration: ${textDecoration};"> ${item.text}</span><span style="text-decoration: ${textDecoration}; color: var(--neutral-500); font-size: 10px;"> ${deadlineText}</span></p>`;
                 }
             });
-            element.innerHTML = content;
+            element.innerHTML = content; // Clear existing content before setting the new content
         }
     }
 }
@@ -359,8 +376,13 @@ function getStatusColor(status) {
     }
 }
 
-clearInterval(updateStatusInterval); // Clear existing interval (if any) and start a new one
-updateStatusInterval = setInterval(updateStatus, 1000);
+// Clear existing interval for status circle and start a new one
+clearInterval(updateStatusCircleInterval);
+updateStatusCircleInterval = setInterval(updateStatusCircle, 1000);
+
+// Clear existing interval for item text and start a new one
+clearInterval(updateItemTextInterval);
+updateItemTextInterval = setInterval(updateItemText, 10000);
 
 document.addEventListener('DOMContentLoaded', () => {
     const copyButtons = document.querySelectorAll('.copy-text-button');
