@@ -1,5 +1,5 @@
 const lastUp = document.querySelector(".lastUp");
-lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Fri, Nov 10, 8:12 PM';
+lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Sun, Nov 12, 11:05 PM';
 
 const announcement = {
     cc101: [
@@ -19,9 +19,9 @@ const announcement = {
             datetime: ""
         },
         { 
-            text: "PAGSUSULIT SA KABANATA 3 MODYUL 1", 
+            text: "PAGSUSULIT SA KABANATA 3 (PAHINA 128-134)", 
             status: "important", 
-            datetime: "2023-11-09T13:00:00"
+            datetime: "2023-11-13T13:00:00"
         },
         { 
             text: "SASAGUTAN KABANATA 1-4", 
