@@ -87,14 +87,9 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "VIDEO DOCUMENTATION", 
+            text: "PRINTED ASSIGNMENT (<a href='https://www.facebook.com/groups/255180827369102/permalink/309890031898181/?mibextid=Nif5oz' target='_blank'>CC100 FB GROUP</a>)", 
             status: "important", 
-            datetime: "2023-11-08T08:00:00"
-        },
-        { 
-            text: "ASSIGNMENT No1-F", 
-            status: "important", 
-            datetime: "2023-11-10T09:00:00"
+            datetime: "2023-11-22T08:00:00"
         }
     ],
     mmw: [
