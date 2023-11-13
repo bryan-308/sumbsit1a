@@ -1,5 +1,5 @@
 const lastUp = document.querySelector(".lastUp");
-lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Sun, Nov 12, 11:05 PM';
+lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Mov, Nov 13, 6:43 PM';
 
 const announcement = {
     cc101: [
@@ -66,9 +66,9 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "PRACTICAL TEST ABOUT LOCOMOTOR AND NON LOCOMOTOR", 
+            text: "PERFORMANCE OF LOCOMOTOR MOVEMENTS", 
             status: "important", 
-            datetime: "2023-11-14T10:00:00"
+            datetime: "2023-11-20T16:00:00"
         },
         { 
             text: "", 
@@ -87,7 +87,7 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "PRINTED ASSIGNMENT (<a href='https://www.facebook.com/groups/255180827369102/permalink/309890031898181/?mibextid=Nif5oz' target='_blank'>CC100 FB GROUP</a>)", 
+            text: "PRINTED ASSIGNMENT (<a href='https://www.facebook.com/groups/255180827369102/permalink/309890031898181/?mibextid=Nif5oz' target='_blank'>CC100 FB GROUP</a> to get file)", 
             status: "important", 
             datetime: "2023-11-22T08:00:00"
         }
@@ -124,11 +124,6 @@ const announcement = {
             text: "PRINTED ASSIGNMENT ABOUT BLIND SOLDIERS", 
             status: "important", 
             datetime: "2023-11-04T08:00:00"
-        },
-        {
-            text: "ASSIGNMENT (YUNG YELLOW PAD)", 
-            status: "important", 
-            datetime: "2023-10-28T08:00:00"
         }
     ]
 };
