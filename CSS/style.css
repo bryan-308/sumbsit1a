@@ -509,6 +509,7 @@ p, ul {
     top: 20%;
     height: 60%;
     opacity: .05;
+    filter: grayscale(1);
     transition: var(--gen-transition);
 }
 
@@ -519,6 +520,7 @@ p, ul {
     top: 20%;
     height: 60%;
     opacity: .05;
+    filter: grayscale(1);
     transition: var(--gen-transition);
 }
 
