@@ -658,6 +658,7 @@ p, ul {
     border: 2px solid var(--color5);
     min-height: 70px;
     min-width: 70px;
+    opacity: .5;
 }
 
 .circle {
