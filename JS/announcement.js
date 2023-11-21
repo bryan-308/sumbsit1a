@@ -1,5 +1,5 @@
 const lastUp = document.querySelector(".lastUp");
-lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Mon, Nov 13, 6:43 PM';
+lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Tue, Nov 21, 3:23 PM';
 
 const announcement = {
     cc101: [
@@ -8,15 +8,15 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "", 
-            status: "" 
+            text: "Seatwork 20.2 ASSIGNMENT", 
+            status: "important", 
+            datetime: "2023-11-22T13:00:00"
         }
     ],
     komfil: [
         { 
             text: "\n", 
-            status: "", 
-            datetime: ""
+            status: ""
         },
         { 
             text: "PAGSUSULIT SA KABANATA 3 (PAHINA 128-134)", 
@@ -24,9 +24,9 @@ const announcement = {
             datetime: "2023-11-13T13:00:00"
         },
         { 
-            text: "SASAGUTAN KABANATA 1-4", 
+            text: "VIDEO ADVOCACY", 
             status: "important", 
-            datetime: "2023-11-30T13:00:00"
+            datetime: "2023-12-11T22:00:00"
         }
     ],
     sts: [
@@ -68,7 +68,7 @@ const announcement = {
         { 
             text: "PERFORMANCE OF LOCOMOTOR MOVEMENTS", 
             status: "important", 
-            datetime: "2023-11-20T16:00:00"
+            datetime: "2023-11-28T10:00:00"
         },
         { 
             text: "", 
@@ -121,9 +121,9 @@ const announcement = {
             status: "" 
         },
         {
-            text: "PRINTED ASSIGNMENT ABOUT BLIND SOLDIERS", 
-            status: "important", 
-            datetime: "2023-11-04T08:00:00"
+            text: "", 
+            status: "", 
+            datetime: ""
         }
     ]
 };
