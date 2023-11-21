@@ -19,11 +19,6 @@ const announcement = {
             status: ""
         },
         { 
-            text: "PAGSUSULIT SA KABANATA 3 (PAHINA 128-134)", 
-            status: "important", 
-            datetime: "2023-11-13T13:00:00"
-        },
-        { 
             text: "VIDEO ADVOCACY", 
             status: "important", 
             datetime: "2023-12-11T22:00:00"
@@ -48,16 +43,6 @@ const announcement = {
         { 
             text: "\n", 
             status: "" 
-        },
-        { 
-            text: "MIDTERM EXAM", 
-            status: "important", 
-            datetime: "2023-10-19T08:00:00"
-        },
-        { 
-            text: "CONTINUATION OF UTP CABLE CRIMPING", 
-            status: "important", 
-            datetime: "2023-11-09T08:00:00"
         }
     ],
     pathfit: [
