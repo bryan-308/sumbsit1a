@@ -1,5 +1,5 @@
 const lastUp = document.querySelector(".lastUp");
-lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Tue, Nov 21, 3:23 PM';
+lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Tue, Nov 29, 7:40 AM';
 
 const announcement = {
     cc101: [
@@ -22,6 +22,11 @@ const announcement = {
             text: "VIDEO ADVOCACY", 
             status: "important", 
             datetime: "2023-12-11T22:00:00"
+        },
+        { 
+            text: "ACTIVITY AND RECITATION", 
+            status: "important", 
+            datetime: "2023-11-30T13:00:00"
         }
     ],
     sts: [
@@ -30,9 +35,9 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "GROUP TASK", 
-            status: "important", 
-            datetime: "2023-11-17T07:30:00"
+            text: "", 
+            status: "", 
+            datetime: ""
         },
         { 
             text: "", 
@@ -64,6 +69,11 @@ const announcement = {
         { 
             text: "\n", 
             status: "" 
+        },
+        { 
+            text: "JOB INTERVIEW VIDEO", 
+            status: "important", 
+            datetime: "2023-12-08T13:00:00"
         }
     ],
     cc100: [
@@ -87,7 +97,7 @@ const announcement = {
             status: "normal" 
         },
         { 
-            text: "MMW SONG (Print 5 copies w/o design)", 
+            text: "MMW SONG PERFORMANCE", 
             status: "important", 
             datetime: "2023-12-01T13:00:00"
         },
@@ -106,9 +116,9 @@ const announcement = {
             status: "" 
         },
         {
-            text: "", 
-            status: "", 
-            datetime: ""
+            text: "TOY DONATION", 
+            status: "important", 
+            datetime: "2023-12-02T08:00:00"
         }
     ]
 };
