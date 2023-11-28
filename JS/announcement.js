@@ -48,6 +48,11 @@ const announcement = {
         { 
             text: "\n", 
             status: "" 
+        },
+        { 
+            text: "INDIVIDUAL PERFORMANCE", 
+            status: "important", 
+            datetime: "2023-11-30T08:00:00"
         }
     ],
     pathfit: [
