@@ -1,5 +1,5 @@
 const lastUp = document.querySelector(".lastUp");
-lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Tue, Nov 29, 7:40 AM';
+lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Sun, Dec 3, 11:11 AM';
 
 const announcement = {
     cc101: [
