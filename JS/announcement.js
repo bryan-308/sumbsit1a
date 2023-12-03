@@ -8,9 +8,9 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "Seatwork 20.2 ASSIGNMENT", 
+            text: "CASE STUDY", 
             status: "important", 
-            datetime: "2023-11-22T13:00:00"
+            datetime: "2023-12-09T13:00:00"
         }
     ],
     komfil: [
@@ -23,11 +23,7 @@ const announcement = {
             status: "important", 
             datetime: "2023-12-11T22:00:00"
         },
-        { 
-            text: "ACTIVITY AND RECITATION", 
-            status: "important", 
-            datetime: "2023-11-30T13:00:00"
-        }
+        
     ],
     sts: [
         { 
@@ -49,11 +45,7 @@ const announcement = {
             text: "\n", 
             status: "" 
         },
-        { 
-            text: "INDIVIDUAL PERFORMANCE", 
-            status: "important", 
-            datetime: "2023-11-30T08:00:00"
-        }
+        
     ],
     pathfit: [
         { 
@@ -61,9 +53,9 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "PERFORMANCE OF LOCOMOTOR MOVEMENTS", 
+            text: "INFOGRAPHICS", 
             status: "important", 
-            datetime: "2023-11-28T10:00:00"
+            datetime: "2023-12-05T10:00:00"
         },
         { 
             text: "", 
@@ -78,7 +70,7 @@ const announcement = {
         { 
             text: "JOB INTERVIEW VIDEO", 
             status: "important", 
-            datetime: "2023-12-08T13:00:00"
+            datetime: "2023-12-07T13:00:00"
         }
     ],
     cc100: [
@@ -87,9 +79,9 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "PRINTED ASSIGNMENT (<a href='https://www.facebook.com/groups/255180827369102/permalink/309890031898181/?mibextid=Nif5oz' target='_blank'>CC100 FB GROUP</a> to get file)", 
+            text: "QUIZ", 
             status: "important", 
-            datetime: "2023-11-22T08:00:00"
+            datetime: "2023-12-06T08:00:00"
         }
     ],
     mmw: [
@@ -97,15 +89,7 @@ const announcement = {
             text: "\n", 
             status: "" 
         },
-        { 
-            text: "Start memorizing your poem/song", 
-            status: "normal" 
-        },
-        { 
-            text: "MMW SONG PERFORMANCE", 
-            status: "important", 
-            datetime: "2023-12-01T13:00:00"
-        },
+        
         { 
             text: "\n", 
             status: "" 
@@ -120,11 +104,7 @@ const announcement = {
             text: "\n", 
             status: "" 
         },
-        {
-            text: "TOY DONATION", 
-            status: "important", 
-            datetime: "2023-12-02T08:00:00"
-        }
+    
     ]
 };
 // To add newline, type "\n"
