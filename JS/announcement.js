@@ -1,5 +1,5 @@
 const lastUp = document.querySelector(".lastUp");
-lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Sun, Dec 4, 7:09 PM';
+lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Tur, Dec 5, 10:09 AM';
 
 const announcement = {
     cc101: [
@@ -55,7 +55,7 @@ const announcement = {
         { 
             text: "INFOGRAPHICS", 
             status: "important", 
-            datetime: "2023-12-12T10:00:00"
+            datetime: "2023-12-14T10:00:00"
         },
         { 
             text: "", 
