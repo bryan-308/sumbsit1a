@@ -1,5 +1,5 @@
 const lastUp = document.querySelector(".lastUp");
-lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Tur, Dec 5, 10:09 AM';
+// lastUp.innerHTML = '<i class="fa-solid fa-clock-rotate-left"></i> Tur, Dec 5, 10:09 AM';
 
 const announcement = {
     cc101: [
@@ -8,9 +8,9 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "CASE STUDY", 
-            status: "important", 
-            datetime: "2023-12-09T13:00:00"
+            text: "", 
+            status: "", 
+            datetime: ""
         }
     ],
     komfil: [
@@ -19,9 +19,9 @@ const announcement = {
             status: ""
         },
         { 
-            text: "VIDEO ADVOCACY", 
-            status: "important", 
-            datetime: "2023-12-11T22:00:00"
+            text: "", 
+            status: "", 
+            datetime: ""
         },
         
     ],
@@ -53,9 +53,9 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "INFOGRAPHICS", 
-            status: "important", 
-            datetime: "2023-12-14T10:00:00"
+            text: "", 
+            status: "", 
+            datetime: ""
         },
         { 
             text: "", 
@@ -68,9 +68,9 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "JOB INTERVIEW VIDEO", 
-            status: "important", 
-            datetime: "2023-12-07T13:00:00"
+            text: "", 
+            status: "", 
+            datetime: ""
         }
     ],
     cc100: [
@@ -79,9 +79,9 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "QUIZ", 
-            status: "important", 
-            datetime: "2023-12-06T08:00:00"
+            text: "", 
+            status: "", 
+            datetime: ""
         }
     ],
     mmw: [
@@ -95,7 +95,7 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "For song-related concerns, reach out to our P.R.O. for assistance.", 
+            text: "", 
             status: "" 
         }
     ],
