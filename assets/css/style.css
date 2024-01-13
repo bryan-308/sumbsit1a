@@ -842,7 +842,7 @@ p, ul {
     display: block;
     color: var(--card-text);
     padding: 16px;
-    width: 70%;
+    width: 75%;
     transition: var(--gen-transition);
     z-index: var(--layer-3);
 }
@@ -893,7 +893,7 @@ p, ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 25%;
 }
 
 .sub-card-top-right img:nth-child(1) {
@@ -974,6 +974,7 @@ p, ul {
 .w-2-content,
 .w-3-content,
 .th-1-content,
+.th-2-content,
 .f-1-content,
 .sat-1-content {
     display: block;
@@ -996,6 +997,7 @@ p, ul {
 .w-2-content.active,
 .w-3-content.active,
 .th-1-content.active,
+.th-2-content.active,
 .f-1-content.active,
 .sat-1-content.active {
     position: absolute;
@@ -1026,6 +1028,7 @@ p, ul {
 .w-2-content.closing,
 .w-3-content.closing,
 .th-1-content.closing,
+.th-2-content.closing,
 .f-1-content.closing,
 .sat-1-content.closing {
     display: block;
