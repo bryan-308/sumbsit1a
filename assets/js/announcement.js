@@ -1,5 +1,5 @@
 const lastUp = document.querySelector(".lastUp");
-lastUp.innerHTML = '<!-- <span class="material-symbols-outlined">history</span> Fri, Jan 5, 10:09 AM -->';
+lastUp.innerHTML = '<!-- <span class="material-symbols-outlined">history</span> Fri, Jan 12, 11:09 PM -->';
 
 const announcement = {
     cc102: [
@@ -9,9 +9,16 @@ const announcement = {
         },
         { 
             text: "", 
-            status: "", 
-            datetime: ""
+            status: "",
+            start: "",
+            end: ""
         }
+    /*  { 
+            text: "", 
+            status: "important",
+            start: "2024-00-00T00:00:00",
+            end: "2024-00-00T00:00:00"
+        } */
     ],
     itnet02: [
         { 
@@ -21,7 +28,8 @@ const announcement = {
         { 
             text: "", 
             status: "", 
-            datetime: ""
+            start: "", 
+            end: ""
         }
     ],
     itws01: [
@@ -32,10 +40,10 @@ const announcement = {
         { 
             text: "", 
             status: "", 
-            datetime: ""
+            start: "", 
+            end: ""
         }
-    ]
-    ,
+    ],
     ge01: [
         { 
             text: "\n", 
@@ -44,7 +52,8 @@ const announcement = {
         { 
             text: "", 
             status: "", 
-            datetime: ""
+            start: "", 
+            end: ""
         }
     ],
     ge02: [
@@ -55,7 +64,8 @@ const announcement = {
         { 
             text: "", 
             status: "", 
-            datetime: ""
+            start: "", 
+            end: ""
         }
     ],
     fil2: [
@@ -66,7 +76,8 @@ const announcement = {
         { 
             text: "", 
             status: "", 
-            datetime: ""
+            start: "", 
+            end: ""
         }
     ],
     nstp2: [
@@ -76,11 +87,11 @@ const announcement = {
         },
         { 
             text: "", 
-            status: "", 
-            datetime: ""
+            status: "",
+            start: "",
+            end: ""
         }
-    ]
-    ,
+    ],
     pathfit2: [
         { 
             text: "\n", 
@@ -88,8 +99,9 @@ const announcement = {
         },
         { 
             text: "", 
-            status: "", 
-            datetime: ""
+            status: "",
+            start: "",
+            end: ""
         }
     ]
 };
