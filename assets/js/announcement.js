@@ -50,10 +50,10 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "", 
-            status: "", 
-            start: "", 
-            end: ""
+            text: "Quiz #2", 
+            status: "important", 
+            start: "2024-02-02T10:00:00", 
+            end: "2024-02-02T13:00:00"
         }
     ],
     ge02: [
