@@ -1,5 +1,5 @@
 const lastUp = document.querySelector(".lastUp");
-lastUp.innerHTML = '<span class="material-symbols-outlined">history</span> Mon, Jan 15, 11:20 PM';
+lastUp.innerHTML = '<span class="material-symbols-outlined">history</span> Friday, Jan 26, 8:30 PM';
 
 const announcement = {
     cc102: [
