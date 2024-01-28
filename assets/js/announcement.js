@@ -26,10 +26,10 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "", 
-            status: "", 
-            start: "", 
-            end: ""
+            text: "Assignment no. 2", 
+            status: "important", 
+            start: "2024-01-28T13:00:00", 
+            end: "2024-01-28T15:00:00"
         }
     ],
     itws01: [
@@ -38,10 +38,10 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "", 
-            status: "", 
-            start: "", 
-            end: ""
+            text: "Seatwork (Inline CSS) \n Checking of Quiz \n Checking of Laboratories 2 - 7 ", 
+            status: "important", 
+            start: "2024-01-28T10:00:00", 
+            end: "2024-01-28T12:00:00"
         }
     ],
     ge01: [
