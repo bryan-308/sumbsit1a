@@ -62,10 +62,10 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "", 
-            status: "", 
-            start: "", 
-            end: ""
+            text: "Quiz", 
+            status: "important", 
+            start: "2024-01-30T14:00:00", 
+            end: "2024-01-30T17:00:00"
         }
     ],
     fil2: [
