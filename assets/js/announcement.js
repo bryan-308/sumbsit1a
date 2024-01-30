@@ -8,10 +8,10 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "", 
-            status: "",
-            start: "",
-            end: ""
+            text: "Quiz #4", 
+            status: "important",
+            start: "2024-02-05T08:00:00",
+            end: "2024-02-05T10:00:00"
         }
     /*  { 
             text: "", 
