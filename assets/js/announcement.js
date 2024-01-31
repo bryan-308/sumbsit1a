@@ -26,10 +26,10 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "Assignment no. 2", 
+            text: "Laboratory 1", 
             status: "important", 
-            start: "2024-01-29T13:00:00", 
-            end: "2024-01-29T15:00:00"
+            start: "2024-02-05T13:00:00", 
+            end: "2024-02-05T15:00:00"
         }
     ],
     itws01: [
@@ -38,10 +38,10 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "Seatwork (Inline CSS) \n Checking of Quiz \n Checking of Laboratories 2 - 7 ", 
-            status: "important", 
-            start: "2024-01-29T10:00:00", 
-            end: "2024-01-29T12:00:00"
+            text: "", 
+            status: "", 
+            start: "", 
+            end: ""
         }
     ],
     ge01: [
@@ -52,8 +52,8 @@ const announcement = {
         { 
             text: "Quiz #2", 
             status: "important", 
-            start: "2024-02-02T10:00:00", 
-            end: "2024-02-02T13:00:00"
+            start: "2024-02-01T10:00:00", 
+            end: "2024-02-01T13:00:00"
         }
     ],
     ge02: [
@@ -64,8 +64,8 @@ const announcement = {
         { 
             text: "Quiz", 
             status: "important", 
-            start: "2024-01-30T14:00:00", 
-            end: "2024-01-30T17:00:00"
+            start: "2024-02-06T14:00:00", 
+            end: "2024-02-06T17:00:00"
         }
     ],
     fil2: [
