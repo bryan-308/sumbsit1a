@@ -276,7 +276,7 @@ const subCards = (function () {
                     if (i.text !== "") {
 
                         const dltxt = i.start
-                            ? `Until ${formatReadableDate(i.start)}`
+                            ? `${formatReadableDate(i.start)}`
                             : "";
 
                         const statusClass = getStatusClass(i.status);
