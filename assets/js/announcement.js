@@ -30,6 +30,12 @@ const announcement = {
             status: "important", 
             start: "2024-02-05T13:00:00", 
             end: "2024-02-05T15:00:00"
+        },
+        { 
+            text: "Quiz #3", 
+            status: "important", 
+            start: "2024-02-07T10:00:00", 
+            end: "2024-02-07T12:00:00"
         }
     ],
     itws01: [
@@ -38,10 +44,10 @@ const announcement = {
             status: "" 
         },
         { 
-            text: "", 
-            status: "", 
-            start: "", 
-            end: ""
+            text: "Quiz #2", 
+            status: "important", 
+            start: "2024-02-05T10:00:00", 
+            end: "2024-02-05T12:00:00"
         }
     ],
     ge01: [
