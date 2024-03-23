@@ -509,7 +509,7 @@ p, ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     overflow: hidden;
     transition: var(--gen-transition);
