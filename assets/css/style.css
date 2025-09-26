@@ -31,7 +31,7 @@
 :root {
     --vercelD: block;
     --vercelL: none;
-    --cardbg: url(/assets/images/waves1.png);
+    --cardbg: url(https://8bfrt1t3tm.ufs.sh/f/6Qa1znflS83GXGyrOF4dS05WAjheYcV3Lq2azvUQH4B9t76T);
     --logo-image: url(/assets/images/weblogoL.png);
     --default-font-family: 'Poppins', sans-serif;
     --title-font: 'Poppins', sans-serif;
@@ -119,7 +119,7 @@
 .dark {
     --vercelD: none;
     --vercelL: block;
-    --cardbg: url(/assets/images/waves.png);
+    --cardbg: url(https://8bfrt1t3tm.ufs.sh/f/6Qa1znflS83GlHqFjgr7xWq6vtosJ5F29ekCl4nycbNhXfjI);
 
     --text-color: #fdfdfded;
     --card-bottom-bg: #212121;   
@@ -628,7 +628,7 @@ p, ul {
     overflow: hidden;
     z-index: var(--layer-0);
 
-    background: url(/assets/images/noise.webp) repeat, var(--primary-linear);
+    background: url(https://8bfrt1t3tm.ufs.sh/f/6Qa1znflS83GvCjqQjZ5H3Sfy0jONLRkbndXshBrlCVDUMqx) repeat, var(--primary-linear);
     -webkit-mask-image: var(--radial-grad);
     mask-image: var(--radial-grad);
 }
